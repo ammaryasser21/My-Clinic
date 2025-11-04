@@ -1,0 +1,64 @@
+.btn {
+  font-size: var(--font-m);
+  font-weight: var(--y-text-bold);
+  padding: var(--y-space-10) var(--y-space-64);
+  border-radius: var(--y-radius-m);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  appearance: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--y-space-8);
+}
+.main-button {
+  background: var(--y-color-btn);
+  color: var(--y-color-text);
+  border: 1px solid var(--y-color-btn);
+}
+.main-button:hover {
+  background-color: var(--y-color-btn-hover);
+}
+.btn.fw {
+  width: 100%;
+}
+.succend-button {
+  background: var(--y-color-bg);
+  color: var(--y-color-txt);
+  border: 1px solid var(--y-color-primary);
+}
+
+.succend-button:hover {
+  filter: brightness(0.8);
+}
+.btn.rounded {
+  border-radius: var(--y-space-64);
+}
+
+.btn.center {
+  margin: 0 auto;
+}
+.btn.outline-button {
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  color: var(--y-color-primary);
+  border: 1px solid var(--y-color-primary);
+}
+.btn.outline-button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+}
+
+.btn.fit-width {
+  width: fit-content;
+  padding: var(--y-space-8) var(--y-space-16);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: var(--y-space-16) !important;
+  }
+}

@@ -1,0 +1,84 @@
+.cart-section .header h2 {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+.cart-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+.cart-section .bottom-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--y-space-96);
+  align-items: start;
+}
+.cart-section .left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+.cart-section .left h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  border-bottom: 2px solid var(--y-color-bg);
+  padding-bottom: var(--y-space-16);
+}
+
+.cart-section .products .product-item > button {
+  display: none;
+}
+@media (max-width: 768px) {
+  .cart-section .bottom-section {
+    grid-template-columns: 1fr;
+  }
+  .products .product-item {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    padding: 0;
+    padding-bottom: var(--y-space-16);
+  }
+  .cart-section .products .product-item > button {
+    display: flex;
+  }
+  .cart-section .products .product-item .content .bottom .first > button {
+    display: none;
+  }
+  .products .product-item .content .bottom:has(.first) {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  .products .product-item .content .bottom .first {
+    display: flex;
+    flex-direction: column;
+  }
+  .products .product-item .content p {
+    font-size: var(--y-space-14) !important;
+  }
+  .products .product-item > img {
+    width: 82px;
+  }
+  .cart-section .left h3 {
+    font-size: var(--y-space-20);
+  }
+}
+
+@media (max-width: 380px) {
+  .products .product-item {
+    grid-template-columns: 1fr;
+  }
+  .cart-section .products .product-item > button {
+    display: none;
+  }
+  .cart-section .products .product-item .content .bottom .first > button {
+    display: flex;
+  }
+  .products .product-item .content .bottom:has(.first) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

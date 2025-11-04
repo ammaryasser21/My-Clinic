@@ -1,0 +1,187 @@
+.payment-section .bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+}
+.payment-section .header h2 {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+
+.payment-section form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--y-space-16);
+  background: transparent;
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+}
+
+.payment-section h2 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  font-size: var(--y-space-20);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-txt);
+}
+.payment-section .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+  width: 100%;
+}
+.payment-section input,
+.payment-section select,
+.payment-section textarea {
+  width: auto;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-14);
+  background: transparent;
+  color: var(--y-color-txt);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.payment-section input::placeholder,
+.payment-section select::placeholder,
+.payment-section textarea::placeholder {
+  color: var(--y-color-txt);
+}
+
+.payment-section input:focus,
+.payment-section select:focus,
+.payment-section textarea:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+
+input[type="radio" i] {
+  accent-color: var(--y-color-primary);
+  border: 2px solid var(--y-color-primary);
+  outline: var(--y-color-txt);
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--y-color-bg);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+input[type="radio" i]:checked {
+  background-color: var(--y-color-primary);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  width: -webkit-fill-available;
+  padding-inline: var(--y-space-42);
+  background-color: var(--y-color-bg);
+  padding: var(--y-space-10);
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-txt);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-group:has(input[type="radio"]:checked) {
+  background-color: var(--y-color-primary);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-text);
+}
+
+input[type="radio" i]:checked {
+  outline: 5px solid var(--y-color-bg);
+}
+
+.payment-section .product-grid {
+  background-color: var(--y-color-bg);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  margin-bottom: var(--y-space-16);
+  color: var(--y-color-txt);
+  border: 2px solid var(--y-color-primary);
+}
+
+.payment-section .coupon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--y-space-12);
+}
+
+.payment-section .coupon input {
+  margin: 0;
+}
+
+.total {
+  margin-top: var(--y-space-16);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-16) var(--y-space-24);
+  display: flex;
+  gap: var(--y-space-16);
+  flex-direction: column;
+  color: var(--y-color-txt);
+  border: 2px solid var(--y-color-primary);
+}
+.total img {
+  width: 24px;
+  height: 24px;
+}
+.total p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 300;
+}
+
+@media (max-width: 992px) {
+  .payment-section .bottom-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--y-space-24);
+  }
+  .payment-section button {
+    width: 100%;
+    justify-content: center;
+  }
+  input:not([type="radio"]) {
+    width: 100% !important;
+  }
+  .radio-group {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .payment-section .product-item {
+    grid-template-columns: 1fr;
+  }
+  .payment-section .form-group {
+    grid-template-columns: 1fr;
+  }
+  .payment-section input,
+  .payment-section select,
+  .payment-section textarea {
+    font-size: var(--y-space-16) !important;
+  }
+  .payment-section h2 {
+    font-size: var(--y-space-16);
+  }
+}

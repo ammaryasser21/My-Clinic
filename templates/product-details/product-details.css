@@ -1,0 +1,445 @@
+.details-section .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+  align-items: center;
+}
+.details-section .container .imgs-section {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: var(--y-space-12);
+  height: 100%;
+}
+.details-section .container .imgs-section .imgs {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: var(--y-space-12);
+  width: 100%;
+}
+.details-section .container .imgs-section .imgs img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--y-space-12);
+  height: 100%;
+}
+.details-section .container .imgs-section .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.details-section .container .imgs-section .main-img img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--y-space-12);
+  height: 100%;
+}
+.details-section .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-32);
+}
+
+.details-section .content .header {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .content h3 {
+  font-size: var(--y-space-24);
+  color: var(--y-color-txt);
+}
+.details-section .content > p {
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-2);
+}
+.details-section .content .rating {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .content .rating .stars {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-2);
+}
+.details-section .content .rating .stars i {
+  font-size: var(--y-space-16);
+  color: var(--y-color-warning);
+}
+
+.details-section .content .rating > p {
+  font-size: var(--y-space-20);
+  color: var(--y-color-txt);
+  font-weight: 700;
+}
+.details-section .content .rating > p:last-child {
+  font-weight: 300;
+}
+
+.details-section .content .price {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .content .price p,
+.details-section .content .color p {
+  font-size: var(--y-space-20);
+  color: var(--y-color-txt);
+  font-weight: 500;
+}
+.details-section .content .price img {
+  width: var(--y-space-26);
+}
+
+.details-section .content .middel-section {
+  display: flex;
+  gap: var(--y-space-16);
+}
+.details-section .content .middel-section .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.details-section .content .middel-section .right select {
+  width: 100%;
+  padding: var(--y-space-10);
+  border-radius: var(--y-space-10);
+  border: 1px solid var(--y-color-primary);
+  background-color: transparent;
+}
+.details-section .content .middel-section .left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.details-section .content .buttons {
+  display: flex;
+  gap: var(--y-space-16);
+  align-items: center;
+}
+.quantity {
+  max-width: 150px;
+}
+
+.toggle-checkbox {
+  display: none;
+}
+.bottom > .toggle-checkbox ~ .top {
+  display: none;
+}
+.details-section .content .middel-section .right {
+  position: relative;
+}
+.details-section .content .middel-section .right .top {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-weight: 700;
+  font-size: var(--y-space-20);
+  border: 1px solid var(--y-color-primary);
+  padding: var(--y-space-10);
+  border-radius: var(--y-space-10);
+  background-color: transparent;
+  gap: var(--y-space-8);
+}
+.details-section .content .middel-section .right .top p {
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+  font-weight: 700;
+}
+
+.details-section .content .middel-section .right .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+  align-items: flex-start;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: var(--y-color-bg);
+  border-radius: var(--y-space-10);
+  color: var(--y-color-txt);
+  border: 0px solid var(--y-color-primary);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+.details-section .content .middel-section .right .content button {
+  transition: all 0.3s ease-in-out;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+  font-weight: 700;
+  width: 100%;
+  padding: var(--y-space-12);
+  text-align: start;
+}
+.details-section .content .middel-section .right .content button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.details-section
+  .content
+  .middel-section
+  .right
+  .toggle-checkbox:checked
+  ~ .content {
+  max-height: 500px;
+  border: 1px solid var(--y-color-primary);
+}
+
+.details-section .content .middel-section .right .top img {
+  transition: transform 0.3s ease-in-out;
+  width: var(--y-space-16);
+  height: var(--y-space-16);
+}
+
+.details-section
+  .content
+  .middel-section
+  .right
+  .toggle-checkbox:checked
+  ~ .top
+  img {
+  transform: rotate(180deg);
+}
+
+.heart {
+  position: absolute;
+  top: var(--y-space-16);
+  left: var(--y-space-14);
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  color: var(--y-color-bg);
+}
+.heart:hover {
+  color: var(--y-color-danger);
+  transform: scale(1.1);
+}
+.heart.active {
+  color: var(--y-color-danger);
+}
+
+.more-details .tabs {
+  display: flex;
+  gap: var(--y-space-16);
+  align-items: center;
+  border-bottom: 1px solid #00000063;
+  margin-bottom: var(--y-space-32);
+}
+.more-details .tabs .tab-button {
+  font-size: var(--y-space-20);
+  color: #00000063;
+  font-weight: 700;
+  width: 200px;
+  text-align: start;
+  padding-block: var(--y-space-20);
+  cursor: pointer;
+}
+
+.tab-radio {
+  display: none;
+}
+
+.tab-contents > div {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#desc-tab:checked ~ .tabs .tab-button[for="desc-tab"],
+#tips-tab:checked ~ .tabs .tab-button[for="tips-tab"] {
+  color: var(--y-color-primary);
+  border-bottom: 2px solid var(--y-color-primary);
+}
+
+#desc-tab:checked ~ .tab-contents .desc-content {
+  display: flex;
+  opacity: 1;
+}
+
+#tips-tab:checked ~ .tab-contents .tips-content {
+  display: flex;
+  opacity: 1;
+}
+.desc-content,
+.tips-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.desc-content p {
+  font-size: var(--y-space-20);
+  color: var(--y-color-txt);
+  font-weight: 300;
+  text-align: justify;
+}
+.desc-content .detail > p,
+.tips-content p {
+  font-weight: 700;
+  font-size: var(--y-space-20);
+  padding-bottom: var(--y-space-16);
+}
+.desc-content ol,
+.tips-content ul {
+  list-style: disc;
+  padding-left: var(--y-space-24);
+  margin-right: var(--y-space-18);
+  font-size: var(--y-space-20);
+}
+.desc-content ol li,
+.tips-content ul li {
+  font-size: var(--y-space-20);
+  font-weight: 300;
+  text-align: justify;
+  padding-bottom: var(--y-space-8);
+}
+.details-section {
+  overflow: visible;
+}
+
+.details-section .content .color {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.details-section .content .color-grid {
+  display: flex;
+  gap: var(--y-space-8);
+}
+.details-section .content .color-grid input {
+  appearance: none;
+
+  width: 43px;
+  aspect-ratio: 1;
+  border-radius: var(--y-space-32);
+  border: none;
+  transition: outline 0.2s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+.details-section .content .color-grid #color-1 {
+  background-color: black;
+}
+.details-section .content .color-grid #color-2 {
+  background-color: red;
+}
+.details-section .content .color-grid #color-3 {
+  background-color: blue;
+}
+.details-section .content .color-grid #color-4 {
+  background-color: green;
+}
+.details-section .content .color-grid #color-1:checked {
+  outline: 5px solid black;
+  border: 2px solid var(--y-color-bg);
+}
+.details-section .content .color-grid #color-2:checked {
+  outline: 5px solid red;
+  border: 2px solid var(--y-color-bg);
+}
+.details-section .content .color-grid #color-3:checked {
+  outline: 5px solid blue;
+  border: 2px solid var(--y-color-bg);
+}
+.details-section .content .color-grid #color-4:checked {
+  outline: 5px solid green;
+  border: 2px solid var(--y-color-bg);
+}
+
+@media (max-width: 768px) {
+  .details-section .container .imgs-section .imgs {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--y-space-14);
+    grid-template-rows: 1fr;
+    order: 2;
+  }
+  .details-section {
+    margin-top: var(--y-space-60);
+  }
+  .details-section .container {
+    grid-template-columns: 1fr;
+  }
+  .details-section .container .imgs-section {
+    grid-template-columns: 1fr;
+  }
+  .details-section .content .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .desc-content p {
+    font-size: var(--y-space-16) !important;
+  }
+  .desc-content .detail > p,
+  .tips-content p {
+    font-size: var(--y-space-16) !important;
+  }
+  .desc-content ol li,
+  .tips-content ul li {
+    font-size: var(--y-space-16) !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .ingredients-section .container .details .grid-items {
+    grid-template-columns: 1fr;
+  }
+
+  .quantity {
+    max-width: 100%;
+  }
+
+  .details-section .content h3 {
+    font-size: var(--y-space-16);
+  }
+  .details-section .content p {
+    font-size: var(--y-space-12) !important;
+  }
+  .details-section .content .price p,
+  .details-section .content button {
+    font-size: var(--y-space-16);
+  }
+  .details-section .content .price img {
+    width: var(--y-space-24);
+    height: var(--y-space-24);
+  }
+  .details-section .content .middel-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-space-16);
+  }
+  .details-section .content .middel-section .quantity {
+    max-width: 100%;
+    height: 100%;
+  }
+  .details-section .content .middel-section > button {
+    display: block;
+    width: 100%;
+    padding: var(--y-space-10) var(--y-space-10);
+  }
+
+  .details-section .content .buttons {
+    margin-top: var(--y-space-0);
+  }
+  .details-section .content button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,19 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-16);
+  color: var(--y-color-primary);
+  font-weight: 700;
+  padding-bottom: var(--y-space-16);
+}
+.breadcrumbs p {
+  color: #00000063;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs {
+    font-size: var(--y-space-12);
+  }
+}

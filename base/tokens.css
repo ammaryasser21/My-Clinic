@@ -1,0 +1,134 @@
+:root {
+  --y-color-primary: #1F2B5B;
+  --y-color-btn:#1F2B5B;
+  --y-color-btn-color: #1F2B5B;
+  --y-color-btn-hover:#3DBDEC;
+  --y-color-bg:#FFF9F3;
+  --y-color-txt: #0e142b;
+  --y-color-text: #fff;
+  --y-color-shadow: 0px 0px 5px 0px #00000040;
+
+
+    --y-color-border-white: #FFFFFF66;
+    --y-color-border: #FFFFFF33;
+  --y-radius-s: 10px;
+  --y-radius-m: 16px;
+  --y-radius-l: 20px;
+  --y-radius-f: 100%;
+
+  --font-s: 16px;
+  --font-m: 20px;
+  --font-l: 24px;
+  --font-xl: 32px;
+
+  --y-color-danger: #ef4444;
+  --y-color-warning: #f59e0b;
+  --y-color-success: #22c55e;
+  --y-color-transparency: transparent;
+
+  --y-text-bold: 700;
+  --y-text-medium: 500;
+  --y-text-normal: 400;
+  --y-text-light: 300;
+
+  --y-space-0: 0;
+  --y-space-2: 2px;
+  --y-space-4: 4px;
+  --y-space-6: 6px;
+  --y-space-8: 8px;
+  --y-space-10: 10px;
+  --y-space-12: 12px;
+  --y-space-14: 14px;
+  --y-space-16: 16px;
+  --y-space-18: 18px;
+  --y-space-20: 20px;
+  --y-space-22: 22px;
+  --y-space-24: 24px;
+  --y-space-26: 26px;
+  --y-space-28: 28px;
+  --y-space-30: 30px;
+  --y-space-32: 32px;
+  --y-space-34: 34px;
+  --y-space-36: 36px;
+  --y-space-38: 38px;
+  --y-space-40: 40px;
+  --y-space-42: 42px;
+  --y-space-44: 44px;
+  --y-space-46: 46px;
+  --y-space-48: 48px;
+  --y-space-50: 50px;
+  --y-space-52: 52px;
+  --y-space-54: 54px;
+  --y-space-56: 56px;
+  --y-space-58: 58px;
+  --y-space-60: 60px;
+  --y-space-62: 62px;
+  --y-space-64: 64px;
+  --y-space-66: 66px;
+  --y-space-80: 80px;
+  --y-space-96: 96px;
+  --y-space-104: 104px;
+  --y-space-120: 120px;
+  --y-space-144: 144px;
+  --y-space-168: 168px;
+  --y-space-180: 180px;
+  --y-space-196: 196px;
+  --y-space-192: 192px;
+  --y-space-216: 216px;
+  --y-space-240: 240px;
+  --y-space-256: 256px;
+  --y-space-264: 264px;
+  --y-space-288: 288px;
+  --y-space-312: 312px;
+  --y-space-328: 328px;
+  --y-space-336: 336px;
+  --y-space-360: 360px;
+  --y-space-376: 376px;
+  --y-space-392: 392px;
+  --y-space-408: 408px;
+  --y-space-424: 424px;
+  --y-space-440: 440px;
+  --y-space-456: 456px;
+  --y-space-472: 472px;
+  --y-space-488: 488px;
+  --y-space-504: 504px;
+  --y-space-520: 520px;
+  --y-space-536: 536px;
+  --y-space-552: 552px;
+  --y-space-568: 568px;
+  --y-space-584: 584px;
+  --y-space-600: 600px;
+
+
+  --y-font-sans: "Cairo", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --y-font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --y-font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --y-font-vlax: "VLAX B Italic", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+
+  --y-line-compact: 1.25;
+  --y-line-tight: 1.1;
+  --y-line-normal: 1.6;
+  --y-line-relaxed: 1.8;
+  --y-line-loose: 2;
+  --y-line-huge: 2.4;
+  --y-line-massive: 3;
+
+  --y-transition-fast:all 120ms ease;
+  --y-transition:all 200ms ease;
+  --y-transition-slow:all 320ms ease;
+}
+
+/* body.dark-theme {
+  --y-color-secondary: #a67b8a;
+  --y-color-bg: #1a1416;
+  --y-color-s-bg: #241d20;
+  --y-color-fg: rgba(193, 149, 160, 0.08);
+  --y-color-text: rgba(255, 255, 255, 0.95);
+  --y-color-muted: rgba(255, 255, 255, 0.7);
+  --y-color-i: #6ca4a1;
+  --y-color-surface: #2a1f23;
+  --y-color-border: #3a2d32;
+  --y-color-primary-contrast: #f5f0f2;
+} */

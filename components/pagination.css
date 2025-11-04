@@ -1,0 +1,53 @@
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(5, 50px);
+  align-items: center;
+  gap: var(--y-space-12);
+  justify-content: center;
+  margin-bottom: var(--y-space-64);
+}
+.pagination button {
+  background-color: transparent;
+  color: var(--y-color-btn-color);
+  font-weight: 600;
+  border: 2px solid var(--y-color-btn-color);
+  border-radius: var(--y-space-8);
+  padding: var(--y-space-12);
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+.pagination button:hover {
+  filter: brightness(1.2);
+  color: var(--y-color-txt);
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border: 2px solid var(--y-color-border);
+  color: var(--y-color-border);
+}
+.pagination button.active {
+  background: var(--y-color-btn);
+  color: var(--y-color-txt) !important;
+}
+.pagination .middle {
+  display: flex;
+  align-items: center;
+  color: var(--y-color-border);
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.pagination button:is(:first-child, :last-child) {
+  border: 2px solid var(--y-color-border);
+  color: var(--y-color-border);
+}
+
+.pagination button:is(:first-child, :last-child):hover {
+  border: 2px solid var(--y-color-btn-color);
+  color: var(--y-color-btn-color);
+}

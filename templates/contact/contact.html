@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> My Clinic</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+
+    <section class="auth-section">
+      <div class="container right-left y-u-max-w-1200">
+        <div class="right">
+          <form action="">
+            <h2>تواصل معنا</h2>
+            <div class="form-group">
+              <label for="name">الاسم</label>
+              <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="number"> الهاتف</label>
+              <input type="number" id="number" name="number">
+            </div>
+            <div class="form-group">
+              <label for="message"> الرسالة</label>
+              <input type="text" id="message" name="message">
+            </div>
+            <div class="form-group">
+              <label for="message"> </label>           
+               <button type="submit" class="btn main-button fw"> ارسال</button>
+            </div>
+
+          </form>
+
+        </div>
+        <div class="left">
+          <div class="cards">
+              <div class="card">
+                <h2>اتصل بنا</h2>
+                <p>+966 12 345 6789</p>
+              </div>
+              <div class="card">
+                <h2>راسلنا على</h2>
+                <p>Customercare@myclinic.com</p>
+              </div>
+              <div class="card">
+                <h2>العنوان</h2>
+                <p>الرياض , المملكة العربية السعودية</p>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>
