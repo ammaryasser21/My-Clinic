@@ -7,9 +7,10 @@
   margin: var(--y-space-0) auto;
   padding-left: var(--y-space-24);
   padding-right: var(--y-space-24);
-  display: grid;
-  grid-template-columns: auto auto 1fr auto;
-  gap: var(--y-space-80);
+  display: grid
+;
+  grid-template-columns: 2fr auto auto auto;
+  gap: var(--y-space-96);
 }
 footer .links {
   gap: var(--y-space-24);
@@ -29,6 +30,7 @@ footer ul li a {
   color: white;
   transition: color var(--y-transition), transform var(--y-transition);
   font-size: var(--y-text-sm);
+  text-wrap: nowrap;
 }
 footer .imgs-row img {
   width: 100px;
@@ -50,7 +52,6 @@ footer .main ul {
 footer .main {
   padding-left: var(--y-space-24);
   justify-content: center;
-  align-items: center;
 }
 :is(footer ul li a, .footer-links a):hover {
   color: var(--y-color-secondary);
@@ -77,7 +78,6 @@ footer .logo a {
 .footer .main p {
   line-height: var(--y-space-36);
   font-size: var(--y-text-sm);
-  text-align: center;
 }
 .footer-links {
   display: flex;

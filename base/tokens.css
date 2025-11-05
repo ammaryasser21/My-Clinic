@@ -1,13 +1,12 @@
 :root {
-  --y-color-primary: #1F2B5B;
-  --y-color-btn:#1F2B5B;
-  --y-color-btn-color: #1F2B5B;
+  --y-color-primary: #384DA4;
+  --y-color-btn:#384DA4;
+  --y-color-btn-color: #384DA4;
   --y-color-btn-hover:#3DBDEC;
-  --y-color-bg:#FFF9F3;
+  --y-color-bg:#FFFFFF;
   --y-color-txt: #0e142b;
   --y-color-text: #fff;
   --y-color-shadow: 0px 0px 5px 0px #00000040;
-
 
     --y-color-border-white: #FFFFFF66;
     --y-color-border: #FFFFFF33;

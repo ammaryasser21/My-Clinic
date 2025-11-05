@@ -29,8 +29,10 @@ header .logo img {
 header .logo ul.desktop-menu {
   list-style: none;
   gap: var(--y-space-24);
-  padding: var(--y-space-8) 0;
+  padding: var(--y-space-12) var(--y-space-16);
   width: max-content;
+  background-color: #F2F2F2;
+  border-radius: var(--y-space-536);
 }
 header .logo ul li a {
   text-decoration: none;

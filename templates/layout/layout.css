@@ -7,7 +7,7 @@ section:is(.border-bottom) {
   margin-bottom: var(--y-space-40) !important;
 }
 
-main:has(.hero-section) section .container h2 {
+main:has(.hero-section) section h2 {
   font-size: var(--y-space-32);
   font-weight: 700;
   color: var(--y-color-primary);
@@ -18,87 +18,191 @@ main:has(.hero-section) section:has(.sale) .container h2 {
 main:has(.hero-section) section:has(.new) .container h2 {
   color: var(--y-color-primary);
 }
-.hero-section .container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--y-space-24);
-}
+
 .hero-section {
-  position: relative;
-  padding-block: var(--y-space-120) !important;
+  padding-block: var(--y-space-40) !important;
   margin: 0;
   padding-bottom: var(--y-space-0) !important;
+  display: flex
+;
+  flex-direction: column;
+  overflow-y: hidden;
+  width: 100%;
+}
+.hero-section .cards{
+  width: max-content;
+  height: 100%;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  height: 90vh;
+}
+.hero-section .cards .card{
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+.hero-section .cards .card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 20% 25%;
+}
+.hero-section .cards .card .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: var(--y-space-24);
+  max-width:792px ;
+  background-color: #00000066;
+  backdrop-filter: blur(3px);
+  color: var(--y-color-bg);
+}
+.hero-section .cards .card .content h2{
+  font-size: var(--y-space-40);
+  font-weight: 700;
+  color: var(--y-color-bg);
+  text-align: center;
+}
+.hero-section .cards .card .content p{
+  font-size: var(--y-space-32);
+  font-weight: 400;
+  color: var(--y-color-bg);
+  text-align: center;
 }
 
-.hero-section .container .right {
+.hero-section .lists{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--y-space-24);
+  position: absolute;
+  z-index: 4;
+  width:min(100%, 1200px);
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: var(--y-space-32);
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  padding: var(--y-space-38) var(--y-space-48);
+}
+.hero-section .lists .bottom{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: var(--y-space-24);
+  width: 100%;
+}
+.hero-section .lists .bottom .list{
   display: flex;
   flex-direction: column;
   gap: var(--y-space-24);
+  position: relative;
+}
+.hero-section .lists .bottom .list input{
+  display: none;
+}
+.hero-section .lists .bottom .list label,.hero-section .lists .bottom .list  input[type="text"]{
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  padding: var(--y-space-16);
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  color: var(--y-color-txt);
+  font-size: var(--y-space-20);
+  cursor: pointer;
 }
-.hero-section .container .right img {
-  width: 250px;
+.hero-section .lists .bottom .list  input[type="text"]{
+  cursor: text;
+  border: none;
+  outline: none;
+}
+.hero-section .lists .bottom .list label img{
+  width: var(--y-space-16);
+  height: var(--y-space-16);
+  transition: all 0.3s ease;
+}
+.hero-section .lists .bottom .list input:checked + label img{
+   rotate: 180deg;
+}
+.hero-section .lists .bottom .list .items{
+  display: none;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  position: absolute;
+  top: 120%;
+  left: 0;
+width: 0;
+height: 0;
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  z-index: 5;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.hero-section .lists .bottom .list input:checked ~ .items{
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+.hero-section .lists .bottom .list .items button{
+  background-color: var(--y-color-bg);
+  width: 100%;
+  padding: var(--y-space-16);
+  color: var(--y-color-txt);
+  font-size: var(--y-space-20);
+  font-weight: 400;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hero-section .lists .bottom .list .items button:hover{
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.way-section{
+  margin-top: var(--y-space-120);
+}
+.way-section .container{
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  padding-block: var(--y-space-40);
+}
+
+.way-section .container .cards{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+}
+.way-section .container .card{
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-10);
+  align-items: center;
+  padding: var(--y-space-24);
+  border-radius: var(--y-radius-l);
+  box-shadow: var(--y-color-shadow);
+
+}
+.way-section .container .cards .card img{
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  align-self: flex-start;
 }
-.hero-section .container .right h2 {
-  font-size: var(--y-space-36);
-  font-weight: 700;
-  color: var(--y-color-primary);
-}
-.hero-section .container .right p {
-  font-weight: 300;
+.way-section .container .cards .card p{
   font-size: var(--y-space-24);
-  color: var(--y-color-primary);
+  font-weight: 700;
+  color: var(--y-color-txt);
   text-align: center;
 }
-.hero-section .container .right a {
-  font-weight: 700;
-  font-size: var(--y-space-20);
-}
-.hero-section .container .left {
-  display: flex;
-  position: relative;
-  gap: var(--y-space-24);
-  width: 100%;
-  height: 100%;
-}
-.hero-section .container .left img {
-  border-radius: var(--y-space-20);
-  border: 10px solid var(--y-color-bg);
-  object-fit: cover;
-  position: absolute;
-}
-.hero-section .container .left img:nth-child(1) {
-  max-width: 351px;
-  max-height: 528px;
-
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.hero-section .container .left img:nth-child(2) {
-  max-width: 242px;
-  max-height: 296px;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
-.hero-section .container .left img:nth-child(3) {
-  width: 225px;
-  max-height: 248px;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-.hero-section .container .left img:nth-child(4) {
-  width: 367px;
-  max-height: 509px;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
