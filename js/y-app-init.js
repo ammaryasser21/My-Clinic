@@ -138,4 +138,26 @@
   } else {
     init();
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const boxGrid = document.querySelector('.categories-section .box-grid');
+    if (boxGrid) {
+      const categoriesGrid = boxGrid.querySelector('.categories-grid');
+      const scrollBtns = boxGrid.querySelectorAll('.btn');
+      const scrollLeftBtn = scrollBtns[0];
+      const scrollRightBtn = scrollBtns[1];
+
+      if (categoriesGrid && scrollLeftBtn && scrollRightBtn) {
+        const scrollAmount = 300;
+
+        scrollRightBtn.addEventListener('click', () => {
+          categoriesGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        scrollLeftBtn.addEventListener('click', () => {
+          categoriesGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+      }
+    }
+  });
 })();

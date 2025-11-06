@@ -24,6 +24,7 @@
 }
 .btn.fw {
   width: 100%;
+  padding-inline: 0;
 }
 .succend-button {
   background: var(--y-color-bg);
@@ -64,8 +65,19 @@
 }
 .btn.fh{
   height: 100%;
+  padding-block: 0;
 }
-
+.btn.circle{
+  border-radius: 50%;
+  padding: var(--y-space-8);
+  width: fit-content;
+  aspect-ratio: 1;
+}
+.btn.disabled{
+  background-color: var(--y-color-grey);
+  color: var(--y-color-text);
+  cursor: not-allowed;
+}
 @media (max-width: 768px) {
   .btn {
     font-size: var(--y-space-16) !important;
