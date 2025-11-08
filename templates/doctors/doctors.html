@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Clinic</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/box.css" />
+  <link rel="stylesheet" href="../../components/icons-badge.css" />
+  <link rel="stylesheet" href="../../components/doctor-page.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/lists-section.css" />
+  <link rel="stylesheet" href="../../components/doctors.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="doctor-page doctors-page">
+      <div class="container y-u-max-w-1200">
+        <div class="lists">
+            <div class="bottom">
+              <div class="list">
+                <input type="checkbox" name="list1" id="list1">
+                <label for="list1">عظام <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                <div class="items">
+                 <button>أسنان</button>
+                 <button>نفسي</button>
+                 <button>باطنة</button>
+                 <button>نساء و توليد</button>
+                 <button>عيون</button>
+                 <button>مخ وأعصاب</button>
+                 <button>عظام</button>
+                 <button>جلدية</button>
+                 <button>صدر و جهاز تنفسي</button>
+                 <button>أنف و أذن و حنجرة</button>
+    
+                </div>
+      
+              </div>
+              <div class="list">
+                <input type="checkbox" name="list2" id="list2">
+                <label for="list2">المدينة <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                <div class="items">
+                  <button>الرياض</button>
+                  <button>مكة المكرمة</button>
+                  <button>المدينة المنورة</button>
+                  <button>جدة</button>
+                  <button>الدمام</button>
+                  <button>الخبر</button>
+                  <button>الجبيل</button>
+                  <button>الأحساء</button>
+                  <button>الخرج</button>
+                  <button>القطيف</button>
+                  <button>تبوك</button>
+                  <button>الباحة</button>
+                  <button>الجوف</button>
+                  <button>الطائف</button>
+                </div>
+      
+              </div>
+              <div class="list">
+                <input type="text" name="doctor" id="doctor" placeholder="اسم الطبيب">
+              </div>
+              <button class="btn main-button fw invert fh">ابحث <img src="../../assets/search.svg" alt=""></button>
+      
+            </div>
+    
+          </div>
+          <div class="breadcrumbs">
+            <a href="../layout/index.html">الرئيسية</a>
+            /
+            <a href="../doctors/doctors.html">الأطباء</a>
+            /
+            <p>عظام</p>
+          </div>
+        <div class="bottom">
+            <div class="content" id="about">
+              <div class="right">
+                <div class="box">
+                    <p>النوع</p>
+                    <div class="types">
+                        <button class="active">الكل</button>
+                        <button>طبيب</button>
+                        <button>طبيبة</button>
+                    </div>
+                    <p>الميعاد</p>
+                    <div class="types">
+                        <button class="active">الكل</button>
+                        <button>اليوم</button>
+                        <button>غدا</button>
+                    </div>
+                    <p>سعر الكشف</p>
+                    <div class="range">
+                        <input type="range" min="0" max="500" value="100" name="range" id="range" oninput="this.parentElement.style.setProperty('--value', this.value); this.nextElementSibling.value = this.value">
+                        <output>100</output>
+                    </div>
+
+                  
+                </div>
+                
+                
+              </div>
+              <div class="left">
+                <div class="doctors-box-clinic">
+                    
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                            <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                            <p>سعر الكشف</p>
+                            <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                                <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                                <p>سعر الكشف</p>
+                            <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                            <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                            <p>سعر الكشف</p>
+                            <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                            <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                            <p>سعر الكشف</p>
+                            <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                            <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                                <p>سعر الكشف</p>
+                            <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                    <div class="box main-box">
+                        <div class="top">
+                          <img src="../../assets/doctor-img.jpg" alt="">
+                          <div class="content">
+                            <h3>دكتور يوسف منصور</h3>
+                            <p>استاذ جامعى تخصص عظام</p>
+      
+                          </div>
+                        </div>                      
+                        <div class="icons">
+                              <div class="rating">
+                                <strong>5</strong>
+                                <i class="fa-solid fa-star"></i>
+                              </div>
+                              <div class="views">
+                                <p>5000</p>
+                                <img src="../../assets/eye.svg" alt="">
+                              </div>
+                            </div>
+                            <p>استاذ جامعى تخصص عظام</p>
+                            <p>الرياض, حي العليا، شارع الملك فهد</p>
+                        <div class="infos">
+                          <div class="info">
+                            <img src="../../assets/clock.svg" alt="">
+                            <p>مدة الإنتظار</p>
+                            <p>30 دقيقه</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/ryal-primary.svg" alt="">
+                            <p>سعر الكشف</p>
+                                        <p>100 ريال</p>
+                          </div>
+                          <div class="info">
+                            <img src="../../assets/phone-primary.svg" alt="">
+                            <p>اتصل احجز</p>
+                            <p>+966123456789</p>
+                          </div>
+                        </div>
+                        <p class="grey">
+                          الكشف بأسبقية الحضور للعيادة
+                        </p>
+                        <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->                 
+                          <!-- <div class="another-time">
+                          <p>لا توجد مواعيد متاحه</p>
+                        </div> -->
+                        <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+      
+                        <div class="another-time">
+                          <input type="checkbox" name="another-time" id="another-time">
+                          <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
+                          <div class="times">
+                            <button class="time">
+                              <p>04:00 مساءًا</p>
+                              <p>07:00 مساءًا</p>
+                            </button> <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          <button class="time">
+                            <p>04:00 مساءًا</p>
+                            <p>07:00 مساءًا</p>
+                          </button>
+                          </div>
+                         
+                        </div>
+                      </div>
+                 
+                  </div>
+                  <button class="btn main-button center">اعرض المزيد</button>
+
+              </div>
+
+
+
+            </div>
+
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

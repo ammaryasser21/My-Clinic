@@ -1,0 +1,12 @@
+.clinic-page .bottom #doctors-clinic:checked ~ .doctors-box-clinic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-24);
+}
+.clinic-page .container::before {
+  top: 154px;
+}
+
+.clinic-page .bottom .tabs{
+  margin-bottom: var(--y-space-24);
+}

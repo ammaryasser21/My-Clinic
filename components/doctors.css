@@ -1,0 +1,164 @@
+.doctor-page .lists {
+    position: relative;
+    bottom: auto;
+}
+
+.doctor-page .bottom input[type="text"]{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--y-space-16);
+    background-color: var(--y-color-bg);
+    box-shadow: var(--y-color-shadow);
+    border-radius: var(--y-radius-l);
+    color: var(--y-color-txt);
+    font-size: var(--y-space-20);
+    cursor: pointer;
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-24);
+}
+
+.doctors-page .bottom .content .right .box > p{
+    font-size: var(--y-space-16);
+    font-weight: 700;
+    color: var(--y-color-txt);
+    margin-bottom: var(--y-space-16);
+}
+.doctors-page .bottom .content .right .box .types{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--y-space-16);
+    align-items: stretch;
+}
+.doctors-page .bottom .content .right .box .types button{
+    font-size: var(--y-space-16);
+    font-weight: 400;
+    color: var(--y-color-txt);
+    background-color: lightgray;
+    appearance: none;
+    padding-block: var(--y-space-8);
+    border-radius: var(--y-radius-s);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.doctors-page .bottom .content .right .box .types button:hover{
+    background-color: var(--y-color-primary);
+    color: var(--y-color-bg);
+}
+.doctors-page .bottom .content .right .box .types button.active{
+    background-color: var(--y-color-primary);
+    color: var(--y-color-bg);
+}
+
+.doctors-page .bottom .content .right .box .range {
+    --track-height: 8px;
+    --thumb-size: 20px;
+    --thumb-color: var(--y-color-primary);
+    --track-color: #7E8FD3;
+    --track-active-color: #8a94d3;
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"] {
+    width: 100%;
+    height: var(--track-height);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: var(--track-height);
+    background: var(--track-color);
+    border-radius: 5px;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: var(--track-height);
+    background: var(--track-color);
+    border-radius: 5px;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: calc((var(--track-height) - var(--thumb-size)) / 2);
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    background-color: var(--y-color-primary);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"]::-moz-range-thumb {
+    width: var(--thumb-size);
+    height: var(--thumb-size);
+    background-color:  var(--y-color-primary);
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.1);
+}
+
+.doctors-page .bottom .content .right .box .range output {
+    position: absolute;
+    background-color: #7E8FD3;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    bottom: calc(100% + 10px);
+    left: calc(var(--value, 100) / 500 * 100%);
+    transform: translateX(-50%);
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.doctors-page .bottom .content .right .box .range output::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #7E8FD3;
+}
+
+[dir="rtl"] .doctors-page .bottom .content .right .box .range output {
+    left: auto;
+    right: calc(var(--value, 100) / 500 * 100%);
+    transform: translateX(50%);
+}
+
+.doctors-page .container::before {
+    top: 327px;
+
+}
+
+.clinic-box .top .content h3{
+  font-size: var(--y-space-20);
+}
+.clinic-box .top .content p{
+  font-size: var(--y-space-14);
+  color: var(--y-color-txt);
+}
