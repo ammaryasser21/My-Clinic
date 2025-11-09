@@ -107,9 +107,9 @@
   border-bottom: 3px solid var(--y-color-primary);
 }
 
-.doctor-page .bottom #about:checked ~ .content .left .about-box,
+.doctor-page .bottom #about:checked ~ .about-box,
+.doctor-page .bottom #rating:checked ~ .rating-box,
 .clinic-page .bottom #doctors-clinic:checked ~ .doctors-box-clinic ,
-.doctor-page .bottom #rating:checked ~ .content .left .rating-box,
 .clinic-page .bottom #rating-clinic:checked ~ .rating-box-clinic,
 .clinic-page .bottom #about-clinic:checked ~ .about-box-clinic {
   display: flex;
@@ -304,11 +304,11 @@ text-align: center;
 .bottom .doctor-info .top .desc p:first-child{
   color: var(--y-color-btn-hover);
 }
-.bottom .doctor-info .top .desc p:last-child{
+/* .bottom .doctor-info .top .desc p:last-child{
   font-size: var(--y-space-14);
   font-weight: 600;
   color: var(--y-color-txt);
-}
+} */
 
 .bottom .doctor-info .bottom .rating{
   display: flex;
@@ -317,7 +317,7 @@ text-align: center;
   align-items: center;
 }
 .bottom .doctor-info .bottom .rating strong{
-  font-size: var(--y-space-24);
+  font-size: var(--y-space-18);
   font-weight: 700;
   color: var(--y-color-txt);
 }

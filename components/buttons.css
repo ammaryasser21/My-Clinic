@@ -20,7 +20,8 @@
   border: 1px solid var(--y-color-btn);
 }
 .main-button:hover {
-  background-color: var(--y-color-btn-hover);
+  background-color: grey;
+  border: 1px solid grey;
 }
 .btn.fw {
   width: 100%;
@@ -78,8 +79,17 @@
   color: var(--y-color-text);
   cursor: not-allowed;
 }
+
+
+.btn.small{
+  font-size: var(--y-space-14);
+}
 @media (max-width: 768px) {
   .btn {
     font-size: var(--y-space-16) !important;
   }
+}
+
+.white-button{
+  box-shadow: var(--y-color-shadow);
 }

@@ -35,6 +35,6 @@
     color: var(--y-color-btn-hover);
   }
   
-  .box button{
+  .box button,.box a{
     font-size: var(--y-space-16) !important;
   }

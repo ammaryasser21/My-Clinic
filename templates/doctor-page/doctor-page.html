@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../../components/box.css" />
   <link rel="stylesheet" href="../../components/icons-badge.css" />
   <link rel="stylesheet" href="../../components/doctor-page.css" />
-  <link rel="stylesheet" href="doctor-page.css" />
+  <link rel="stylesheet" href="../../components/calendar.css" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,21 +52,11 @@
           </div>
         </div>
         <div class="bottom">
-          <input type="radio" name="tab" id="about" checked> 
-          <input type="radio" name="tab" id="rating">
-          <div class="tabs">
-            
-              <label for="about">عن العيادة</label>
-             
-             
-              <label for="rating">تقييمات </label>
-            
 
-          </div>
 
-            <div class="content" id="about">
+            <div class="content">
               <div class="right">
-                <div class="box">
+                <div class="box main-box">
                   <h3>عيادة دكتور يوسف منصور</h3>
                   <p>حي العليا، شارع الملك فهد، الرياض</p>
                   <div class="infos">
@@ -93,25 +83,33 @@
                     <!-- <div class="another-time">
                     <p>لا توجد مواعيد متاحه</p>
                   </div> -->
-                  <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+                  <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </a>
 
-                  <div class="another-time">
-                    <input type="checkbox" name="another-time" id="another-time">
-                    <label for="another-time">احجز وقت آخر <img src="../../assets/bottom-arrow.svg" alt=""></label>
-                    <div class="times">
-                      <button class="time">
-                        <p>04:00 مساءًا</p>
-                        <p>07:00 مساءًا</p>
-                      </button> <button class="time">
-                      <p>04:00 مساءًا</p>
-                      <p>07:00 مساءًا</p>
-                    </button>
-                    <button class="time">
-                      <p>04:00 مساءًا</p>
-                      <p>07:00 مساءًا</p>
-                    </button>
+                  <button class="btn succend-button fw" id="open-calendar-btn">اختر ميعاد اخر</button>
+
+                  <div id="calendar-popover" class="calendar-popover">
+                    <div class="calendar-header">
+                      <button class="prev-month">&lt;</button>
+                      <h3 class="month-year">نوفمبر 2025</h3>
+                      <button class="next-month">&gt;</button>
                     </div>
-                   
+                    <div class="calendar-body">
+                      <div class="day-names">
+                        <span>الاحد</span>
+                        <span>الاثنين</span>
+                        <span>الثلاثاء</span>
+                        <span>الاربعاء</span>
+                        <span>الخميس</span>
+                        <span>الجمعة</span>
+                        <span>السبت</span>
+                      </div>
+                      <div class="days-grid">
+                        
+                      </div>
+                    </div>
+                    <div class="calendar-footer">
+                        <a href="../booking/booking-doctor.html" class="btn main-button fw" id="reservation-link">احجز في 15/11/2025 (04:00 مساءًا - 07:00 مساءًا)</a>
+                    </div>
                   </div>
                 </div>
                 <h2>يمكنك الحجز مع أطباء أخريين</h2>
@@ -134,7 +132,7 @@
                         <img src="../../assets/eye.svg" alt="">
                       </div>
                     </div>
-                    <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+                    <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </a>
                   
                 </div>
                 <div class="box doctor-info">
@@ -157,7 +155,7 @@
                         <img src="../../assets/eye.svg" alt="">
                       </div>
                     </div>
-                   <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+                   <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </a>
                 </div>
                 <div class="box doctor-info">
 
@@ -179,10 +177,21 @@
                         <img src="../../assets/eye.svg" alt="">
                       </div>
                     </div>
-                   <button class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </button>
+                   <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءًا - 07:00 مساءًا) </a>
                 </div>
               </div>
               <div class="left">
+                <input type="radio" name="tab" id="about" checked> 
+                <input type="radio" name="tab" id="rating">
+                <div class="tabs">
+
+                    <label for="about">عن العيادة</label>
+                   
+                   
+                    <label for="rating">تقييمات </label>
+                  
+      
+                </div>
                 <div class="about-box">
                   <div class="box">                
                     <p class="title">عن الطبيب</p>
@@ -362,6 +371,7 @@
   <y-footer></y-footer>
 
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/calendar.js"></script>
 </body>
 
 </html>

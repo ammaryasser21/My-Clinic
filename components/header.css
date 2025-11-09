@@ -17,7 +17,7 @@ header .logo {
   grid-template-columns: 1fr 1fr;
 }
 header .logo img {
-  width: 80px;
+  width: 111px;
   cursor: pointer;
   object-fit: contain;
 }
@@ -29,17 +29,20 @@ header .logo img {
 header .logo ul.desktop-menu {
   list-style: none;
   gap: var(--y-space-24);
-  padding: var(--y-space-12) var(--y-space-16);
+  padding: var(--y-space-10) var(--y-space-16);
   width: max-content;
   background-color: #F2F2F2;
   border-radius: var(--y-space-536);
+  padding-bottom: 6px;
+  padding-inline: 0;
+  overflow: hidden;
 }
 header .logo ul li a {
   text-decoration: none;
   color: var(--y-color-txt);
   font-size: var(--y-space-22);
   line-height: 28px;
-  padding: 16px 8px;
+  padding: 0px 16px;
   font-weight: var(--y-text-normal);
   transition: color 0.3s ease;
 }
@@ -48,7 +51,9 @@ header .logo ul li a:hover {
 }
 
 header .logo ul li a.active {
-  color: var(--y-color-btn) !important;
+  background-color: var(--y-color-btn) !important;
+  color: var(--y-color-bg) !important;
+  border-radius: var(--y-space-536);
 }
 
 header .user-nav {

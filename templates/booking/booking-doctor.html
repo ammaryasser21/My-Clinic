@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="../../components/icons-badge.css" />
   <link rel="stylesheet" href="../../components/doctor-page.css" />
   <link rel="stylesheet" href="booking.css" />
+  <link rel="stylesheet" href="../../components/popup.css" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,8 +32,44 @@
   <y-navbar></y-navbar>
 
   <main>
-    <section class="booking booking-doctor">
+    <section class="doctor-page booking booking-doctor">
       <div class="container y-u-max-w-1200">
+        <div class="bottom">
+            <div class="content">
+              <div class="right">
+                <div class="box">
+                  <img src="../../assets/doctor-img.jpg" alt="">
+                  <a href="../doctor-page/doctor-page.html"><h3>دكتور يوسف منصور</h3></a>
+                  <p>استاذ جامعى تخصص عظام</p>
+                  <p class="small-text">عيادة الدكتور يوسف منصور</p>
+                  <p class="small-text">اليوم | 08 نوفمبر 2025 (04:00 مساءًا - 07:00 مساءًا)</p>
+
+                </div>
+
+              </div>
+              <div class="left">
+                <h2>اكمل حجزك</h2>
+  <form action="">
+    <label for="name">اسم المريض</label>
+    <input type="text" name="name" id="name">
+    <label for="phone">رقم الجوال</label>
+    <input type="number" name="phone" id="phone">
+    <label for="email">البريد الإلكتروني</label>
+    <input type="email" name="email" id="email">
+    <div class="buttons">
+      <a href="#payment-popup" class="btn main-button fw">احجز</a>
+      <a href="#" class="btn white-button fw">الغاء</a>
+    </div>
+  </form>
+
+              </div>
+
+
+
+            </div>
+
+          
+        </div>
       </div>
     </section>
 
@@ -40,6 +77,50 @@
 
 
   <y-footer></y-footer>
+
+  <div id="payment-popup" class="popup-overlay">
+    <div class="popup-content payment-form">
+      <a href="#" class="close-btn">&times;</a>
+      <h2> ادخل بريدك الاكتروني</h2>
+      <div class="form-group">
+        <input type="email" id="email-popup" placeholder="البريد الإلكتروني">
+      </div>
+      <h2>معلومات الدفع</h2>
+      <div class="form-group">
+        <label for="card-number">رقم البطاقة</label>
+        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+      </div>
+      <div class="form-group">
+        <label for="card-holder">اسم حامل البطاقة</label>
+        <input type="text" id="card-holder" placeholder="الاسم على البطاقة">
+      </div>
+      <div class="expiry-cvv">
+        <div class="form-group">
+          <label for="expiry-month">تاريخ الإنتهاء</label>
+          <input type="text" id="expiry-month" placeholder="الشهر">
+        </div>
+        <div class="form-group">
+          <label for="expiry-year" style="color: transparent;">.</label>
+          <input type="text" id="expiry-year" placeholder="السنة">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="XXX">
+        </div>
+      </div>
+      <a href="#success-popup" class="btn main-button fw">ادفع</a>
+    </div>
+  </div>
+
+  <div id="success-popup" class="popup-overlay">
+    <div class="popup-content success-popup">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="icon">
+        <i class="fas fa-check"></i>
+      </div>
+      <h2>تم الحجز بنجاح</h2>
+    </div>
+  </div>
 
   <script src="../../js/y-app-init.js"></script>
 </body>

@@ -1,5 +1,5 @@
 .clinic-page .bottom #doctors-clinic:checked ~ .doctors-box-clinic {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
   gap: var(--y-space-24);
 }
