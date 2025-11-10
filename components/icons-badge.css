@@ -1,36 +1,36 @@
-.icons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .icons .rating{
-    display: flex;
-    flex-direction: row;
-    gap: var(--y-space-8);
-    align-items: center;
-  }
-  .icons .rating strong{
-    font-size: var(--y-space-16);
-    font-weight: 700;
-    color: var(--y-color-btn-hover);
-  }
-  .icons .rating i{
-    font-size: var(--y-space-16);
-    color: var(--y-color-warning);
-  }
-  .icons .views{
-    display: flex;
-    flex-direction: row;
-    gap: var(--y-space-8);
-    align-items: center;
-  }
-  .icons .views p{
-    font-size: var(--y-space-16);
-    font-weight: 400;
-    color: var(--y-color-grey);
-  }
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.icons .rating {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-8);
+  align-items: center;
+}
+.icons .rating strong {
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-btn-hover);
+}
+.icons .rating i {
+  font-size: var(--y-space-16);
+  color: var(--y-color-warning);
+}
+.icons .views {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-8);
+  align-items: center;
+}
+.icons .views p {
+  font-size: var(--y-space-16);
+  font-weight: 400;
+  color: var(--y-color-grey);
+}
 
-.icons.grey{
+.icons.grey {
   background-color: #d3d3d39c;
 }

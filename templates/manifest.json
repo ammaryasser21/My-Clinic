@@ -1,7 +1,7 @@
 {
   "name": "My Clinic",
   "short_name": "My Clinic",
-  "description": "My Clinic هي موقع لحجز المواعيد الطبية.",
+  "description": "My Clinic for booking appointments and clinics",
   "dir": "rtl",
   "lang": "ar",
   "display": "standalone",
@@ -21,14 +21,15 @@
   ],
   "prefer_related_applications": false,
   "categories": [
-
-    "الطبي",
-    "العيادات",
-    "الأطباء",
-    "المواعيد",
-    "الحجز",
-    "الطبيب",
-    "العيادة",
-    "الموعد"
+    "health",
+    "booking",
+    "clinics",
+    "doctors",
+    "appointments",
+    "medical",
+    "healthcare",
+    "hospital",
+    "doctor",
+    "appointment"
   ]
 }

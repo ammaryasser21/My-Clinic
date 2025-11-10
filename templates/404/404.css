@@ -35,6 +35,18 @@
   gap: var(--y-space-12);
 }
 
+.error-content img[alt="404-mobile"] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: none;
+}
+.error-content img[alt="404-desktop"] {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 @media (max-width: 768px) {
   .error-code {
     font-size: var(--y-text-8xl);
@@ -53,5 +65,11 @@
   }
   .error-message {
     font-size: var(--y-text-md);
+  }
+  .error-content img[alt="404-mobile"] {
+    display: block;
+  }
+  .error-content img[alt="404-desktop"] {
+    display: none;
   }
 }

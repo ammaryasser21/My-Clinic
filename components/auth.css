@@ -110,7 +110,6 @@
   display: flex;
   align-items: center;
   gap: var(--y-space-8);
-
 }
 .auth-section form .form-group .left input {
   width: 100%;
@@ -120,10 +119,10 @@
   background-color: transparent;
   transition: all 0.3s ease;
   appearance: none;
-    width: 16px;
-    aspect-ratio: 1;
-    border-radius: var(--y-space-328);
-    cursor: pointer;
+  width: 16px;
+  aspect-ratio: 1;
+  border-radius: var(--y-space-328);
+  cursor: pointer;
 }
 .auth-section form .form-group .left input:checked {
   background-color: var(--y-color-primary);
@@ -134,7 +133,7 @@
   border-color: var(--y-color-bg);
   box-shadow: 0 0 0 3px
     color-mix(in oklab, var(--y-color-primary) 20%, transparent);
-    outline: 5px solid var(--y-color-primary);
+  outline: 5px solid var(--y-color-primary);
 }
 .auth-section form .form-group input:focus {
   border-color: var(--y-color-primary);
@@ -142,7 +141,6 @@
     color-mix(in oklab, var(--y-color-primary) 20%, transparent);
   outline: none;
 }
-
 
 .auth-section form .form-group label {
   font-weight: 700;
@@ -159,6 +157,9 @@
 }
 
 @media (max-width: 768px) {
+  .auth-section form .form-group {
+    grid-template-columns: 1fr;
+  }
   .auth-section .container {
     flex-direction: column-reverse;
     gap: var(--y-space-44);
@@ -184,9 +185,6 @@
     grid-template-columns: 1fr;
     margin-inline: var(--y-space-14);
   }
-  .auth-section .container.right-left .right {
-    order: 2;
-  }
   .auth-section .container.right-left .left img {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -202,5 +200,12 @@
   .auth-section form p.new-account,
   .auth-section form p.forget-text {
     font-size: var(--y-space-14) !important;
+  }
+  .auth-section form {
+    padding: var(--y-space-20);
+  }
+  .auth-section .container.right-left .left .cards {
+    padding: var(--y-space-20);
+    border-right: none;
   }
 }

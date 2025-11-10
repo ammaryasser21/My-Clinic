@@ -1,96 +1,119 @@
-.lists{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--y-space-24);
-    position: absolute;
-    z-index: 4;
-    width:min(100%, 1200px);
-    bottom: -150px;
-    left: 50%;
-    transform: translateX(-50%);
-    gap: var(--y-space-32);
-    background-color: var(--y-color-bg);
-    box-shadow: var(--y-color-shadow);
-    border-radius: var(--y-radius-l);
-    padding: var(--y-space-38) var(--y-space-48);
-  }
-  .lists .bottom{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    align-items: center;
-    gap: var(--y-space-24);
-    width: 100%;
-  }
-  .lists .bottom .list{
-    display: flex;
-    flex-direction: column;
-    gap: var(--y-space-24);
-    position: relative;
-  }
-  .lists .bottom .list input{
-    display: none;
-  }
-  .lists .bottom .list label,.hero-section .lists .bottom .list  input[type="text"]{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: var(--y-space-16);
-    background-color: var(--y-color-bg);
-    box-shadow: var(--y-color-shadow);
-    border-radius: var(--y-radius-l);
-    color: var(--y-color-txt);
-    font-size: var(--y-space-20);
-    cursor: pointer;
-  }
-  
-  .lists .bottom .list  input[type="text"]{
-    cursor: text;
-    border: none;
-    outline: none;
-  }
-  .lists .bottom .list label img{
-    width: var(--y-space-16);
-    height: var(--y-space-16);
-    transition: all 0.3s ease;
-  }
-  .lists .bottom .list input:checked + label img{
-     rotate: 180deg;
-  }
-  .lists .bottom .list .items{
-    display: none;
-    flex-direction: column;
-    gap: var(--y-space-24);
-    position: absolute;
-    top: 120%;
-    left: 0;
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--y-space-24);
+  position: absolute;
+  z-index: 4;
+  width: min(90%, 1200px);
+  bottom: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  gap: var(--y-space-32);
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  padding: var(--y-space-38) var(--y-space-48);
+}
+.lists .bottom {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: var(--y-space-24);
+  width: 100%;
+}
+.lists .bottom .list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  position: relative;
+}
+.lists .bottom .list input {
+  display: none;
+}
+.lists .bottom .list label,
+.hero-section .lists .bottom .list input[type="text"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--y-space-16);
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  color: var(--y-color-txt);
+  font-size: var(--y-space-20);
+  cursor: pointer;
+}
+
+.lists .bottom .list input[type="text"] {
+  cursor: text;
+  border: none;
+  outline: none;
+}
+.lists .bottom .list label img {
+  width: var(--y-space-16);
+  height: var(--y-space-16);
+  transition: all 0.3s ease;
+}
+.lists .bottom .list input:checked + label img {
+  rotate: 180deg;
+}
+.lists .bottom .list .items {
+  display: none;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  position: absolute;
+  top: 120%;
+  left: 0;
   width: 0;
   height: 0;
-    background-color: var(--y-color-bg);
-    box-shadow: var(--y-color-shadow);
-    border-radius: var(--y-radius-l);
-    z-index: 5;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  z-index: 5;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.lists .bottom .list input:checked ~ .items {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+}
+.lists .bottom .list .items button {
+  background-color: var(--y-color-bg);
+  width: 100%;
+  padding: var(--y-space-16);
+  color: var(--y-color-txt);
+  font-size: var(--y-space-20);
+  font-weight: 400;
+  text-align: right;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.lists .bottom .list .items button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+@media (max-width: 768px) {
+  .lists .bottom {
+    grid-template-columns: repeat(2, 1fr);
   }
-  .lists .bottom .list input:checked ~ .items{
-    display: flex;
-    width: 100%;
-    height: fit-content;
+}
+
+@media (max-width: 476px) {
+  .lists .bottom .list label,
+  .hero-section .lists .bottom .list input[type="text"],
+  .lists .bottom .list input[type="text"] {
+    font-size: var(--y-space-14);
+    padding: var(--y-space-14);
+    border-radius: var(--y-radius-s);
   }
-  .lists .bottom .list .items button{
-    background-color: var(--y-color-bg);
-    width: 100%;
-    padding: var(--y-space-16);
-    color: var(--y-color-txt);
-    font-size: var(--y-space-20);
-    font-weight: 400;
-    text-align: right;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .lists:has(.list) .bottom img {
+    width: var(--y-space-20) !important;
   }
-  .lists .bottom .list .items button:hover{
-    background-color: var(--y-color-primary);
-    color: var(--y-color-bg);
+  .lists {
+    padding: var(--y-space-20);
   }
+}

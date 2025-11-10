@@ -7,6 +7,15 @@
   top: 154px;
 }
 
-.clinic-page .bottom .tabs{
+.clinic-page .bottom .tabs {
   margin-bottom: var(--y-space-24);
+}
+
+@media (max-width: 768px) {
+  .clinic-page .bottom #doctors-clinic:checked ~ .doctors-box-clinic {
+    grid-template-columns: 1fr;
+  }
+  .clinic-page .container::before {
+    top: 641px;
+  }
 }

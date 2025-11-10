@@ -37,4 +37,7 @@
   .about-us-section .container h2 {
     font-size: var(--y-space-24);
   }
+  .about-us-section .container .right {
+    order: 2;
+  }
 }

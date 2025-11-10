@@ -90,6 +90,10 @@ section.panner {
   .contact-section .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .auth-section .container .left {
+    width: 100%;
+    display: grid !important;
+  }
 }
 
 @media (max-width: 576px) {

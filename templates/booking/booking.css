@@ -1,74 +1,100 @@
-.booking .right .box img{
-    width: 96px;
-    aspect-ratio: 1;
-    border-radius: var(--y-radius-f);
-    object-fit: cover;
-    object-position: top;
+.booking .right .box img {
+  width: 96px;
+  aspect-ratio: 1;
+  border-radius: var(--y-radius-f);
+  object-fit: cover;
+  object-position: top;
 }
-.booking .right .box h3{
-    font-size: var(--y-space-20);
-    font-weight: 600;
-    margin-bottom: var(--y-space-8);
+.booking .right .box h3 {
+  font-size: var(--y-space-20);
+  font-weight: 600;
+  margin-bottom: var(--y-space-8);
 }
-.booking .right .box p{
-    font-size: var(--y-space-14);
-    font-weight: 400;
-    color: var(--y-color-txt);
+.booking .right .box p {
+  font-size: var(--y-space-14);
+  font-weight: 400;
+  color: var(--y-color-txt);
 }
-.booking .right .box p.small-text{
-    font-size: var(--y-space-14);
-    font-weight: 400;
-    color: var(--y-color-txt);
-    opacity: 0.5;
-}
-
-.booking .left h2{
-    font-size: var(--y-space-32);
-    font-weight: 700;
-    color: var(--y-color-txt);
-    margin-bottom: var(--y-space-0);
-    padding: 0 !important;
-}
-.booking-clinc .left h2{
-    color: var(--y-color-primary);
-}
-.booking .left form{
-    display: flex;
-    flex-direction: column;
-}
-.booking .left form label{
-    font-size: var(--y-space-24);
-    color: var(--y-color-txt);
-    margin-bottom: var(--y-space-16);
-}
-.booking .left form input{
-    width: 100%;
-    padding: var(--y-space-12) var(--y-space-12);
-    border: 1px solid #0000004D;
-    border-radius: var(--y-radius-m);
-    background-color:var(--y-color-bg);
-    transition: all 0.3s ease;
-    margin-bottom: var(--y-space-24);
+.booking .right .box p.small-text {
+  font-size: var(--y-space-14);
+  font-weight: 400;
+  color: var(--y-color-txt);
+  opacity: 0.5;
 }
 
-.booking .left form input:focus{
-    border-color: var(--y-color-primary);
-    box-shadow: 0 0 0 3px
-      color-mix(in oklab, var(--y-color-primary) 20%, transparent);
-    outline: none;
+.booking .left h2,
+.booking .bottom .content > h2 {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-0);
+  padding: 0 !important;
 }
-.booking .left form .buttons{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--y-space-16);
-    margin-top: var(--y-space-16);
+.booking-clinc .left h2 {
+  color: var(--y-color-primary);
 }
-.booking .left form .buttons button.white-button{
-    background-color: var(--y-color-bg);
-    color: var(--y-color-txt);
-    box-shadow: var(--y-color-shadow);
+.booking .left form {
+  display: flex;
+  flex-direction: column;
+}
+.booking .left form label {
+  font-size: var(--y-space-24);
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-16);
+}
+.booking .left form input {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid #0000004d;
+  border-radius: var(--y-radius-m);
+  background-color: var(--y-color-bg);
+  transition: all 0.3s ease;
+  margin-bottom: var(--y-space-24);
+}
+
+.booking .left form input:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.booking .left form .buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-16);
+}
+.booking .left form .buttons button.white-button {
+  background-color: var(--y-color-bg);
+  color: var(--y-color-txt);
+  box-shadow: var(--y-color-shadow);
+}
+.booking .bottom .content > h2 {
+  display: none;
 }
 
 .booking .container::before {
-    top: 186px;
+  top: 186px;
+}
+@media (max-width: 768px) {
+  .booking .left h2 {
+    display: none;
+  }
+
+  .booking .bottom .content > h2 {
+    display: block;
+  }
+
+  .booking .container::before {
+    top: 278px;
+  }
+}
+@media (max-width: 476px) {
+  .booking .right .box img {
+    margin: auto;
+  }
+  .booking .left form label {
+    font-size: var(--y-space-18);
+    text-align: start;
+  }
 }

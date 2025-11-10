@@ -97,7 +97,8 @@ section:first-child {
 }
 @media (max-width: 768px) {
   section:first-child {
-    margin-top: var(--y-space-50);
+    padding-top: var(--y-space-96);
+    margin-top: var(--y-space-0);
   }
   section {
     margin-bottom: var(--y-space-32);

@@ -33,59 +33,59 @@
   text-decoration: none;
   color: #888;
 }
-.close-btn:hover{
-    color: #000;
+.close-btn:hover {
+  color: #000;
 }
 
 .payment-form h2 {
-    margin-bottom: 20px;
-    text-align: start;
-    font-weight: 600;
+  margin-bottom: 20px;
+  text-align: start;
+  font-weight: 600;
 }
 
 .payment-form .form-group {
-    margin-bottom: 15px;
-    text-align: right;
+  margin-bottom: 15px;
+  text-align: right;
 }
 
 .payment-form label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 .payment-form input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .payment-form .expiry-cvv {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .payment-form .expiry-cvv .form-group {
-    flex: 1;
+  flex: 1;
 }
 
 .success-popup .icon {
-    font-size: 50px;
-    color: #2c7be5;
-    margin-bottom: 20px;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    background-color: var(--y-color-btn);
+  font-size: 50px;
+  color: #2c7be5;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background-color: var(--y-color-btn);
 }
-.success-popup .icon i{
-    color: var(--y-color-bg);
+.success-popup .icon i {
+  color: var(--y-color-bg);
 }
 
 .success-popup h2 {
-    font-size: 24px;
+  font-size: 24px;
 }

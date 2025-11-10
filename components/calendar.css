@@ -2,17 +2,18 @@
   display: none;
   flex-direction: column;
   gap: var(--y-space-16);
-  position: absolute;
-  top: 105%;
-  left: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
+  max-width: min(90%, 450px);
   background-color: #fff;
   border-radius: var(--y-radius-l);
   box-shadow: var(--y-color-shadow);
   padding: var(--y-space-16);
-  z-index: 10;
+  z-index: 117;
 }
-
 .calendar-popover.show {
   display: flex;
 }
@@ -43,7 +44,7 @@
   color: var(--y-color-primary);
   font-size: 18px;
 }
-.calendar-popover a.btn{
+.calendar-popover a.btn {
   font-size: 14px;
 }
 .calendar-header button:hover {
