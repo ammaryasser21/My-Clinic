@@ -84,7 +84,7 @@ function initializeCalendar(buttonId, popoverId, reservationLinkId) {
       const formattedDate = `${selectedDate.getDate()}/${
         selectedDate.getMonth() + 1
       }/${selectedDate.getFullYear()}`;
-      reservationLink.textContent = `احجز في ${formattedDate} (04:00 مساءًا - 07:00 مساءًا)`;
+      reservationLink.textContent = `احجز في ${formattedDate} (04:00 مساءً - 07:00 مساءً)`;
       const baseUrl = reservationLink.href.split("?")[0];
       reservationLink.href = `${baseUrl}?date=${formattedDate}`;
     }

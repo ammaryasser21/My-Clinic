@@ -65,6 +65,30 @@
   text-decoration: underline;
 }
 
+.account-page .box .actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-8);
+  align-items: center;
+}
+.account-page .box .actions button {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-4);
+  align-items: center;
+  font-size: var(--y-space-14);
+}
+.account-page .box .actions button.delete {
+  color: var(--y-color-danger);
+}
+
+.account-page .ratings-stars i {
+  color: gold !important;
+}
+
+.account-page .ratings-stars i.inactive {
+  color: var(--y-color-grey) !important;
+}
 @media (max-width: 768px) {
   .account-page .container::before {
     top: 31.5rem;

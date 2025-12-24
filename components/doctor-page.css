@@ -415,6 +415,21 @@
   justify-content: space-around;
   align-items: center;
 }
+.bottom .price {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+.bottom .price img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.bottom .price p {
+  font-size: var(--y-space-14);
+  font-weight: 400;
+  color: var(--y-color-txt);
+}
 .left .box .bottom .right {
   display: flex;
   flex-direction: column;

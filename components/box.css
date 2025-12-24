@@ -40,6 +40,17 @@
   font-size: var(--y-space-16) !important;
 }
 
+.box p.address {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.box p.address img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  filter: invert(1);
+}
 @media (max-width: 380px) {
   .box button,
   .box a {
