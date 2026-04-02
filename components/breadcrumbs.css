@@ -10,6 +10,7 @@
 .breadcrumbs p {
   color: #00000063;
   font-weight: 700;
+  text-wrap: nowrap;
 }
 .breadcrumbs-container {
   display: flex;

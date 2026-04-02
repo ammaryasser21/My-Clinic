@@ -1,0 +1,52 @@
+/* Shared field errors (auth, contact, booking, popups) */
+.field-error {
+  margin: 0;
+  font-size: var(--y-space-14);
+  font-weight: var(--y-text-medium);
+  color: var(--y-color-danger);
+  line-height: 1.35;
+}
+
+.y-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-6);
+  min-width: 0;
+  margin-bottom: var(--y-space-24);
+}
+
+.booking .left form .y-form-field:last-of-type {
+  margin-bottom: 0;
+}
+
+.y-form-field.has-error > input,
+.y-form-field.has-error > textarea {
+  border-color: var(--y-color-danger) !important;
+}
+
+.y-form-field.has-error > input:focus,
+.y-form-field.has-error > textarea:focus {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-danger) 25%, transparent) !important;
+}
+
+.booking .left form .y-form-field input {
+  margin-bottom: 0;
+}
+
+.booking .left form .y-form-field + .y-form-field {
+  margin-top: 0;
+}
+
+.payment-form .form-group.has-error input {
+  border-color: var(--y-color-danger);
+}
+
+.payment-form .form-group.has-error input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-danger) 25%, transparent);
+}
+
+.payment-form .field-error {
+  text-align: start;
+  margin-top: var(--y-space-4);
+}

@@ -85,8 +85,13 @@ function initializeCalendar(buttonId, popoverId, reservationLinkId) {
         selectedDate.getMonth() + 1
       }/${selectedDate.getFullYear()}`;
       reservationLink.textContent = `احجز في ${formattedDate} (04:00 مساءً - 07:00 مساءً)`;
-      const baseUrl = reservationLink.href.split("?")[0];
-      reservationLink.href = `${baseUrl}?date=${formattedDate}`;
+      const raw =
+        reservationLink.getAttribute("href") || reservationLink.href || "";
+      const [pathPart, queryPart = ""] = raw.split("?");
+      const params = new URLSearchParams(queryPart);
+      params.set("date", formattedDate);
+      reservationLink.href =
+        pathPart + (params.toString() ? `?${params.toString()}` : "");
     }
   }
 

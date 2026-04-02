@@ -1,5 +1,6 @@
 :root {
   --y-color-primary: #384DA4;
+  --y-color-primary-light: color-mix(in oklab, var(--y-color-primary) 22%, white);
   --y-color-btn:#384DA4;
   --y-color-btn-color: #384DA4;
   --y-color-btn-hover:#3DBDEC;

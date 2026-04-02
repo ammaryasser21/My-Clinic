@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/buttons.css" />
   <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="../../components/form-validation.css" />
   <link rel="stylesheet" href="../../components/breadcrumbs.css" />
   <link rel="stylesheet" href="contact.css" />
 
@@ -41,29 +42,47 @@
       <div class="container right-left y-u-max-w-1200">
         
         <div class="right">
-          <form action="">
+          <form action="" method="post" novalidate data-y-form="contact">
             <h2>تواصل معنا</h2>
             <div class="form-group">
               <label for="name">الاسم</label>
-              <input type="text" id="name" name="name">
+              <div class="form-field">
+                <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error"
+                  aria-invalid="false">
+                <p class="field-error" id="name-error" role="alert" hidden></p>
+              </div>
             </div>
 
             <div class="form-group">
               <label for="email">البريد الإلكتروني</label>
-              <input type="email" id="email" name="email">
+              <div class="form-field">
+                <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error"
+                  aria-invalid="false">
+                <p class="field-error" id="email-error" role="alert" hidden></p>
+              </div>
             </div>
 
             <div class="form-group">
               <label for="number"> الهاتف</label>
-              <input type="number" id="number" name="number">
+              <div class="form-field">
+                <input type="tel" id="number" name="number" autocomplete="tel" inputmode="numeric"
+                  aria-describedby="number-error" aria-invalid="false">
+                <p class="field-error" id="number-error" role="alert" hidden></p>
+              </div>
             </div>
             <div class="form-group">
               <label for="message"> الرسالة</label>
-              <input type="text" id="message" name="message">
+              <div class="form-field">
+                <textarea id="message" name="message" rows="4" aria-describedby="message-error"
+                  aria-invalid="false"></textarea>
+                <p class="field-error" id="message-error" role="alert" hidden></p>
+              </div>
             </div>
             <div class="form-group">
-              <label for="message"> </label>
-              <button type="submit" class="btn main-button fw"> ارسال</button>
+              <span class="form-group-heading" aria-hidden="true"></span>
+              <div class="form-field">
+                <button type="submit" class="btn main-button fw"> ارسال</button>
+              </div>
             </div>
 
           </form>
@@ -100,6 +119,8 @@
   <y-footer></y-footer>
 
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/y-form-validation.js"></script>
+  <script src="../../js/forms-validation.js"></script>
 </body>
 
 </html>

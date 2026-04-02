@@ -1,4 +1,96 @@
 (() => {
+  const SESSION_KEY = "y_clinic_session";
+
+  const readSession = () => {
+    if (window.YClinicStorage?.getSession) {
+      return window.YClinicStorage.getSession();
+    }
+    try {
+      const raw = localStorage.getItem(SESSION_KEY);
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
+  };
+
+  const sessionFirstName = (session) => {
+    if (!session || typeof session !== "object") return "";
+    const fn = String(session.firstName || "").trim();
+    if (fn) return fn;
+    const full = String(session.fullName || "").trim();
+    const w = full.split(/\s+/).filter(Boolean)[0];
+    if (w) return w;
+    const em = String(session.email || "").trim();
+    if (em.includes("@")) return em.split("@")[0];
+    return "";
+  };
+
+  const applyAuthNav = (root = document) => {
+    const session = readSession();
+    const loggedIn = !!(session && String(session.email || "").trim());
+    const first = sessionFirstName(session);
+    const label = loggedIn
+      ? first
+        ? `مرحبا، ${first}`
+        : "مرحبا"
+      : "تسجيل الدخول";
+
+    root.querySelectorAll('a[data-y-auth="nav"]').forEach((a) => {
+      a.textContent = label;
+      a.setAttribute(
+        "href",
+        loggedIn ? "../account/account.html" : "../login/login.html"
+      );
+    });
+
+    root.querySelectorAll('a[data-y-auth="footer"]').forEach((a) => {
+      a.textContent = label;
+      a.setAttribute(
+        "href",
+        loggedIn
+          ? "../../templates/account/account.html"
+          : "../../templates/login/login.html"
+      );
+    });
+  };
+
+  let filterAccordionOutsideCloseWired = false;
+
+  const wireFilterAccordionOutsideClose = () => {
+    if (filterAccordionOutsideCloseWired) return;
+    filterAccordionOutsideCloseWired = true;
+
+    document.addEventListener(
+      "pointerdown",
+      (e) => {
+        if (e.button === 2) return;
+        if (e.target.closest(".lists .bottom .list")) return;
+        document
+          .querySelectorAll(".lists .bottom .list > input[type='checkbox']")
+          .forEach((cb) => {
+            cb.checked = false;
+          });
+      },
+      true
+    );
+
+    document.addEventListener("change", (e) => {
+      const t = e.target;
+      if (
+        !(t instanceof HTMLInputElement) ||
+        t.type !== "checkbox" ||
+        !t.closest(".lists .bottom")
+      )
+        return;
+      if (!t.checked) return;
+      document
+        .querySelectorAll(".lists .bottom .list > input[type='checkbox']")
+        .forEach((cb) => {
+          if (cb !== t) cb.checked = false;
+        });
+    });
+  };
+
   const wireMobileMenu = (root = document) => {
     const mobileMenuBtn = root.querySelector(".mobile-menu-btn");
     const mobileMenuOverlay = root.querySelector(".mobile-menu-overlay");
@@ -127,6 +219,7 @@
     await loadFragment("y-footer", "../../components/footer.html");
 
     if (headerHost) wireMobileMenu(headerHost);
+    applyAuthNav(document);
     wireActiveLinks(document);
   };
 
@@ -137,6 +230,8 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
+    wireFilterAccordionOutsideClose();
+
     const boxGrid = document.querySelector(".categories-section .box-grid");
     if (boxGrid) {
       const categoriesGrid = boxGrid.querySelector(".categories-grid");

@@ -78,7 +78,13 @@
 .lists .bottom .list input:checked ~ .items {
   display: flex;
   width: 100%;
-  height: fit-content;
+  max-height: min(42vh, 260px);
+  height: auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 .lists .bottom .list .items button {
   background-color: var(--y-color-bg);
@@ -94,6 +100,17 @@
 .lists .bottom .list .items button:hover {
   background-color: var(--y-color-primary);
   color: var(--y-color-bg);
+}
+
+.lists .bottom .list .items button.selected {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  font-weight: 700;
+}
+
+.lists .bottom .list .items button:focus-visible {
+  outline: 2px solid var(--y-color-primary);
+  outline-offset: 2px;
 }
 
 @media (max-width: 768px) {

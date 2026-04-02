@@ -176,6 +176,26 @@ main:has(.hero-section) section:has(.new) .container h2 {
   text-align: center;
 }
 
+.categories-section .categories-grid .category-item a.y-category-link {
+  text-decoration: none;
+  color: inherit;
+  border-radius: var(--y-radius-m);
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.categories-section .categories-grid .category-item a.y-category-link:hover {
+  background-color: color-mix(in srgb, var(--y-color-primary) 12%, transparent);
+}
+
+.categories-section .categories-grid .category-item a.y-category-link:focus-visible {
+  outline: 2px solid var(--y-color-primary);
+  outline-offset: 4px;
+}
+
+.categories-section .categories-grid .category-item a.y-category-link:active {
+  transform: scale(0.98);
+}
+
 .doctors-section .box-grid {
   background-color: #f5f5f5;
   padding: var(--y-space-32);

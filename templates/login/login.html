@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/buttons.css" />
   <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="../../components/form-validation.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,17 +31,25 @@
     <section class="auth-section">
       <div class="container y-u-max-w-1200">
         <div class="right">
-          <form action="">
+          <form action="" method="post" novalidate data-y-form="login">
             <h2>تسجيل الدخول</h2>
 
             <div class="form-group">
               <label for="email">البريد الإلكتروني</label>
-              <input type="email" id="email" name="email">
+              <div class="form-field">
+                <input type="email" id="email" name="email" autocomplete="username" aria-describedby="email-error"
+                  aria-invalid="false">
+                <p class="field-error" id="email-error" role="alert" hidden></p>
+              </div>
             </div>
 
             <div class="form-group">
               <label for="password">كلمة المرور</label>
-              <input type="password" id="password" name="password">
+              <div class="form-field">
+                <input type="password" id="password" name="password" autocomplete="current-password"
+                  aria-describedby="password-error" aria-invalid="false">
+                <p class="field-error" id="password-error" role="alert" hidden></p>
+              </div>
             </div>
             <a href="../forget-password/forget-password.html">هل نسيت كلمة المرور؟</a>
 
@@ -64,7 +73,10 @@
 
   <y-footer></y-footer>
 
+  <script src="../../js/y-storage.js"></script>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/y-form-validation.js"></script>
+  <script src="../../js/forms-validation.js"></script>
 </body>
 
 </html>

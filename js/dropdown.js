@@ -25,12 +25,6 @@ class CustomDropdown {
         this.selectOption(item);
       });
     });
-
-    document.addEventListener("click", (e) => {
-      if (!this.dropdown.contains(e.target) && this.isOpen) {
-        this.close();
-      }
-    });
   }
 
   toggle() {
@@ -44,7 +38,7 @@ class CustomDropdown {
   open() {
     document.querySelectorAll(".custom-dropdown.active").forEach((dropdown) => {
       if (dropdown !== this.dropdown) {
-        dropdown.classList.remove("active");
+        dropdown.dropdownInstance?.close();
       }
     });
 
@@ -127,6 +121,33 @@ class CustomDropdown {
   }
 }
 
+let customDropdownOutsideCloseWired = false;
+
+function wireCustomDropdownOutsideClose() {
+  if (customDropdownOutsideCloseWired) return;
+  customDropdownOutsideCloseWired = true;
+
+  document.addEventListener(
+    "pointerdown",
+    (e) => {
+      if (e.button === 2) return;
+      document.querySelectorAll(".custom-dropdown.active").forEach((dd) => {
+        if (!dd.contains(e.target)) {
+          dd.dropdownInstance?.close();
+        }
+      });
+    },
+    true
+  );
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    document.querySelectorAll(".custom-dropdown.active").forEach((dd) => {
+      dd.dropdownInstance?.close();
+    });
+  });
+}
+
 function initCustomDropdowns() {
   const dropdowns = document.querySelectorAll(".custom-dropdown");
   const instances = [];
@@ -137,6 +158,8 @@ function initCustomDropdowns() {
 
     dropdown.dropdownInstance = instance;
   });
+
+  if (dropdowns.length) wireCustomDropdownOutsideClose();
 
   return instances;
 }

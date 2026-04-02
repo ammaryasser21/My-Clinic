@@ -50,6 +50,12 @@
 .calendar-header button:hover {
   background-color: var(--y-color-primary-light);
 }
+
+.calendar-header button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 .calendar-body {
   display: flex;
   flex-direction: column;
@@ -99,4 +105,82 @@
 }
 .main-box {
   position: relative;
+}
+
+/* Form pickers (signup, etc.) — same shell as doctors calendar-popover */
+.calendar-popover.y-form-picker-popover {
+  z-index: 210;
+}
+
+.time-popover .time-popover-header {
+  justify-content: center;
+}
+
+.time-popover .time-popover-header .month-year {
+  flex: 0 1 auto;
+  text-align: center;
+}
+
+.time-picker-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-12);
+}
+
+.time-picker-label {
+  margin: 0;
+  font-size: var(--y-space-14);
+  font-weight: var(--y-text-bold);
+  color: var(--y-color-grey);
+}
+
+.time-picker-options {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--y-space-4);
+}
+
+.time-picker-options--minutes {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.time-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: var(--y-space-6) var(--y-space-4);
+  border: 1px solid color-mix(in oklab, var(--y-color-primary) 35%, transparent);
+  border-radius: var(--y-radius-s);
+  background: var(--y-color-bg);
+  color: var(--y-color-txt);
+  font: inherit;
+  font-size: var(--font-s);
+  font-weight: var(--y-text-medium);
+  cursor: pointer;
+  transition: var(--y-transition);
+}
+
+.time-option:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  border-color: var(--y-color-primary);
+}
+
+.time-option.selected {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  border-color: var(--y-color-primary);
+}
+
+.y-form-picker-footer--split {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--y-space-12);
+}
+
+.y-form-picker-footer--split .btn {
+  flex: 1;
+  min-width: min(140px, 100%);
 }

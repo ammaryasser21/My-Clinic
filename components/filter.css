@@ -37,6 +37,11 @@
   left: 0;
   background-color: var(--y-color-bg);
   min-width: 200px;
+  max-height: min(50vh, 280px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 0.5rem 0;

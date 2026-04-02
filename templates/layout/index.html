@@ -62,52 +62,54 @@
           </div>
         </div>
       </div>
-      <div class="lists">
+      <div class="lists y-home-hero">
         <h2>احجز جلستك الآن</h2>
         <div class="bottom">
-          <div class="list">
+          <div class="list" data-y-filter="specialty">
             <input type="checkbox" name="list1" id="list1">
-            <label for="list1">التخصص <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
+            <label for="list1"><span class="list-label-text">التخصص</span>
+              <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
             <div class="items">
-              <button>أسنان</button>
-              <button>نفسي</button>
-              <button>باطنة</button>
-              <button>نساء و توليد</button>
-              <button>عيون</button>
-              <button>مخ وأعصاب</button>
-              <button>عظام</button>
-              <button>جلدية</button>
-              <button>صدر و جهاز تنفسي</button>
-              <button>أنف و أذن و حنجرة</button>
+              <button type="button">أسنان</button>
+              <button type="button">نفسي</button>
+              <button type="button">باطنة</button>
+              <button type="button">نساء و توليد</button>
+              <button type="button">عيون</button>
+              <button type="button">مخ وأعصاب</button>
+              <button type="button">عظام</button>
+              <button type="button">جلدية</button>
+              <button type="button">صدر و جهاز تنفسي</button>
+              <button type="button">أنف و أذن و حنجرة</button>
 
             </div>
 
           </div>
-          <div class="list">
+          <div class="list" data-y-filter="city">
             <input type="checkbox" name="list2" id="list2">
-            <label for="list2">المدينة <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
+            <label for="list2"><span class="list-label-text">المدينة</span>
+              <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
             <div class="items">
-              <button>الرياض</button>
-              <button>مكة المكرمة</button>
-              <button>المدينة المنورة</button>
-              <button>جدة</button>
-              <button>الدمام</button>
-              <button>الخبر</button>
-              <button>الجبيل</button>
-              <button>الأحساء</button>
-              <button>الخرج</button>
-              <button>القطيف</button>
-              <button>تبوك</button>
-              <button>الباحة</button>
-              <button>الجوف</button>
-              <button>الطائف</button>
+              <button type="button">الرياض</button>
+              <button type="button">مكة المكرمة</button>
+              <button type="button">المدينة المنورة</button>
+              <button type="button">جدة</button>
+              <button type="button">الدمام</button>
+              <button type="button">الخبر</button>
+              <button type="button">الجبيل</button>
+              <button type="button">الأحساء</button>
+              <button type="button">الخرج</button>
+              <button type="button">القطيف</button>
+              <button type="button">تبوك</button>
+              <button type="button">الباحة</button>
+              <button type="button">الجوف</button>
+              <button type="button">الطائف</button>
             </div>
 
           </div>
           <div class="list">
-            <input type="text" name="doctor" id="doctor" placeholder="اسم الطبيب">
+            <input type="text" name="doctor" id="doctor" placeholder="اسم الطبيب" autocomplete="off">
           </div>
-          <button class="btn main-button fw invert fh">ابحث <img src="../../assets/search.svg" alt="أيقونة البحث"></button>
+          <button type="button" class="btn main-button fw invert fh y-filter-search">ابحث <img src="../../assets/search.svg" alt="أيقونة البحث"></button>
 
         </div>
 
@@ -147,69 +149,79 @@
           <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
           <ul class="categories-grid">
             <li class="category-item">
-              <a href="../doctors/doctors.html">
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="أطفال وحديثي الولادة">
                 <img src="../../assets/baby.png" alt="أيقونة تخصص أطفال وحديثي الولادة">
                 <p>أطفال وحديثي الولادة</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/tooth.png" alt="أيقونة تخصص الأسنان">
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="أسنان">
+                <img src="../../assets/tooth.png" alt="أيقونة تخصص الأسنان">
                 <p>أسنان</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"><img src="../../assets/mind.png" alt="أيقونة تخصص الطب النفسي">
-                <p> نفسي</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="نفسي">
+                <img src="../../assets/mind.png" alt="أيقونة تخصص الطب النفسي">
+                <p>نفسي</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/stomach.png" alt="أيقونة تخصص الباطنة">
-                <p> باطنة</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="باطنة">
+                <img src="../../assets/stomach.png" alt="أيقونة تخصص الباطنة">
+                <p>باطنة</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/pregnant.png" alt="أيقونة تخصص نساء وتوليد">
-                <p> نساء و توليد</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="نساء و توليد">
+                <img src="../../assets/pregnant.png" alt="أيقونة تخصص نساء وتوليد">
+                <p>نساء و توليد</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/eye.png" alt="أيقونة تخصص العيون">
-                <p> عيون</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="عيون">
+                <img src="../../assets/eye.png" alt="أيقونة تخصص العيون">
+                <p>عيون</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/brain.png" alt="أيقونة تخصص المخ والأعصاب">
-                <p> مخ وأعصاب</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="مخ وأعصاب">
+                <img src="../../assets/brain.png" alt="أيقونة تخصص المخ والأعصاب">
+                <p>مخ وأعصاب</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/bone.png" alt="أيقونة تخصص العظام">
-                <p> عظام</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="عظام">
+                <img src="../../assets/bone.png" alt="أيقونة تخصص العظام">
+                <p>عظام</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/hand.png" alt="أيقونة تخصص الجلدية">
-                <p> جلدية</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="جلدية">
+                <img src="../../assets/hand.png" alt="أيقونة تخصص الجلدية">
+                <p>جلدية</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/lungs.png" alt="أيقونة تخصص الصدر والجهاز التنفسي">
-                <p> صدر و جهاز تنفسي</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="صدر و جهاز تنفسي">
+                <img src="../../assets/lungs.png" alt="أيقونة تخصص الصدر والجهاز التنفسي">
+                <p>صدر و جهاز تنفسي</p>
               </a>
 
             </li>
             <li class="category-item">
-              <a href="../doctors/doctors.html"> <img src="../../assets/ear.png" alt="أيقونة تخصص أنف وأذن وحنجرة">
-                <p> أنف و أذن و حنجرة</p>
+              <a href="../doctors/doctors.html" class="y-category-link" data-y-specialty="أنف و أذن و حنجرة">
+                <img src="../../assets/ear.png" alt="أيقونة تخصص أنف وأذن وحنجرة">
+                <p>أنف و أذن و حنجرة</p>
               </a>
 
             </li>
@@ -233,7 +245,7 @@
             <div class="top">
               <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
               <div class="desc">
-                <a href="../doctor-page/doctor-page.html">
+                <a href="../doctor-page/doctor-page.html?id=dr-youssef">
                   <p>دكتور يوسف منصور</p>
                 </a>
                 <p>استاذ جامعي تخصص عظام</p>
@@ -259,22 +271,22 @@
             <div class="top">
               <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
               <div class="desc">
-                <a href="../doctor-page/doctor-page.html">
-                  <p>دكتور يوسف منصور</p>
+                <a href="../doctor-page/doctor-page.html?id=dr-sara">
+                  <p>دكتورة سارة العتيبي</p>
                 </a>
-                <p>استاذ جامعي تخصص عظام</p>
+                <p>استشارية جلدية وتجميل</p>
               </div>
             </div>
             <p>
-              استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال المفاصل
+              خبرة في أمراض الجلد التحسسية والعلاجات التجميلية غير الجراحية
             </p>
             <div class="bottom">
               <div class="rating">
-                <strong>5</strong>
+                <strong>4.8</strong>
                 <i class="fa-solid fa-star"></i>
               </div>
               <div class="views">
-                <p>5000</p>
+                <p>3200</p>
                 <img src="../../assets/eye.svg" alt="عدد المشاهدات">
               </div>
             </div>
@@ -284,22 +296,22 @@
             <div class="top">
               <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
               <div class="desc">
-                <a href="../doctor-page/doctor-page.html">
-                  <p>دكتور يوسف منصور</p>
+                <a href="../doctor-page/doctor-page.html?id=dr-khalid">
+                  <p>دكتور خالد الشهري</p>
                 </a>
-                <p>استاذ جامعي تخصص عظام</p>
+                <p>أخصائي أنف وأذن وحنجرة</p>
               </div>
             </div>
             <p>
-              استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال المفاصل
+              تشخيص وعلاج اضطرابات السمع والتهاب الجيوب الأنفية
             </p>
             <div class="bottom">
               <div class="rating">
-                <strong>5</strong>
+                <strong>4.9</strong>
                 <i class="fa-solid fa-star"></i>
               </div>
               <div class="views">
-                <p>5000</p>
+                <p>4100</p>
                 <img src="../../assets/eye.svg" alt="عدد المشاهدات">
               </div>
             </div>
@@ -393,6 +405,7 @@
   <y-footer></y-footer>
 
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/y-home-filters.js"></script>
 </body>
 
 </html>

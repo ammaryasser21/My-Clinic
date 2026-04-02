@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="../../components/header.css" />
   <link rel="stylesheet" href="../../components/footer.css" />
   <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/calendar.css" />
   <link rel="stylesheet" href="../../components/auth.css" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,38 +31,93 @@
     <section class="auth-section">
       <div class="container y-u-max-w-1200">
         <div class="right">
-          <form action="">
+          <form action="" method="post" novalidate>
             <h2> حساب جديد</h2>
 
             <div class="form-group">
               <label for="name">الاسم</label>
-              <input type="text" id="name" name="name">
+              <div class="form-field">
+                <input type="text" id="name" name="name" autocomplete="name" aria-describedby="name-error"
+                  aria-invalid="false">
+                <p class="field-error" id="name-error" role="alert" hidden></p>
+              </div>
             </div>
             <div class="form-group">
               <label for="phone">رقم الهاتف</label>
-              <input type="number" id="phone" name="phone">
+              <div class="form-field">
+                <input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="numeric"
+                  aria-describedby="phone-error" aria-invalid="false">
+                <p class="field-error" id="phone-error" role="alert" hidden></p>
+              </div>
             </div>
             <div class="form-group">
               <label for="email">البريد الإلكتروني</label>
-              <input type="email" id="email" name="email">
-            </div>
-            <div class="form-group">
-              <label for="birthdate"> تاريخ الميلاد</label>
-              <input type="date" id="birthdate" name="birthdate">
-            </div>
-            <div class="form-group">
-              <label for="birthdate"> الجنس</label>
-              <div class="left">
-                <input type="radio" id="gender" name="gender">
-                <label for="gender">ذكر</label>
-                <input type="radio" id="gender" name="gender">
-                <label for="gender">أنثى</label>
+              <div class="form-field">
+                <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error"
+                  aria-invalid="false">
+                <p class="field-error" id="email-error" role="alert" hidden></p>
               </div>
+            </div>
+            <div class="form-group">
+              <label for="birthdate-trigger"> تاريخ الميلاد</label>
+              <div class="form-field">
+                <div class="y-field-picker" data-y-date-picker data-y-max-date="today" data-y-min-date="1900-01-01">
+                  <input type="hidden" name="birthdate" id="birthdate" value="" data-y-date-value />
+                  <button type="button" class="y-field-picker-trigger" id="birthdate-trigger" aria-haspopup="dialog"
+                    aria-expanded="false" aria-controls="birthdate-popover" aria-describedby="birthdate-error"
+                    aria-invalid="false">
+                    <span class="y-field-picker-value" data-placeholder="اختر التاريخ"></span>
+                    <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+                  </button>
+                  <div id="birthdate-popover" class="calendar-popover y-form-picker-popover" role="dialog"
+                    aria-modal="true" aria-labelledby="birthdate-dialog-title">
+                    <div class="calendar-header">
+                      <button type="button" class="prev-month" aria-label="الشهر السابق">&lt;</button>
+                      <h3 class="month-year" id="birthdate-dialog-title">—</h3>
+                      <button type="button" class="next-month" aria-label="الشهر التالي">&gt;</button>
+                    </div>
+                    <div class="calendar-body">
+                      <div class="day-names">
+                        <span>الأحد</span>
+                        <span>الاثنين</span>
+                        <span>الثلاثاء</span>
+                        <span>الأربعاء</span>
+                        <span>الخميس</span>
+                        <span>الجمعة</span>
+                        <span>السبت</span>
+                      </div>
+                      <div class="days-grid"></div>
+                    </div>
+                    <div class="calendar-footer">
+                      <button type="button" class="btn main-button fw" data-y-date-confirm>تأكيد</button>
+                    </div>
+                  </div>
+                </div>
+                <p class="field-error" id="birthdate-error" role="alert" hidden></p>
+              </div>
+            </div>
 
+            <div class="form-group">
+              <span class="form-group-heading" id="gender-label">الجنس</span>
+              <div class="form-field">
+                <div class="left" role="group" aria-labelledby="gender-label">
+                  <input type="radio" id="gender-male" name="gender" value="male" aria-describedby="gender-error"
+                    aria-invalid="false">
+                  <label for="gender-male">ذكر</label>
+                  <input type="radio" id="gender-female" name="gender" value="female" aria-describedby="gender-error"
+                    aria-invalid="false">
+                  <label for="gender-female">أنثى</label>
+                </div>
+                <p class="field-error" id="gender-error" role="alert" hidden></p>
+              </div>
             </div>
             <div class="form-group">
               <label for="password">كلمة المرور</label>
-              <input type="password" id="password" name="password">
+              <div class="form-field">
+                <input type="password" id="password" name="password" autocomplete="new-password"
+                  aria-describedby="password-error" aria-invalid="false">
+                <p class="field-error" id="password-error" role="alert" hidden></p>
+              </div>
             </div>
             <button type="submit" class="btn main-button fw">إنشاء حساب</button>
             <p class="new-account">لديك حساب؟ <a href="../login/login.html">تسجيل الدخول</a></p>
@@ -81,7 +137,11 @@
 
   <y-footer></y-footer>
 
+  <script src="../../js/y-storage.js"></script>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/form-datetime-pickers.js"></script>
+  <script src="../../js/y-form-validation.js"></script>
+  <script src="../../js/signup-validation.js"></script>
 </body>
 
 </html>

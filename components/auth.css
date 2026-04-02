@@ -92,15 +92,48 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: var(--y-space-8);
-  align-items: center;
+  align-items: start;
 }
-.auth-section form .form-group input {
+.auth-section form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-6);
+  min-width: 0;
+}
+.auth-section form .field-error {
+  margin: 0;
+  font-size: var(--y-space-14) !important;
+  font-weight: var(--y-text-medium) !important;
+  color: var(--y-color-danger) !important;
+  line-height: 1.35 !important;
+}
+.auth-section form .form-group.has-error
+  > .form-field
+  :is(input:not([type="hidden"]), textarea, .y-field-picker-trigger) {
+  border-color: var(--y-color-danger);
+}
+.auth-section form .form-group.has-error > .form-field .y-field-picker-trigger:focus-visible {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-danger) 25%, transparent);
+}
+.auth-section form .form-group.has-error > .form-field :is(input:not([type="hidden"]), textarea):focus {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-danger) 25%, transparent);
+}
+.auth-section form .form-group :is(input, textarea) {
   width: 100%;
   padding: var(--y-space-12) var(--y-space-12);
   border: 1px solid var(--y-color-primary);
   border-radius: var(--y-space-8);
   background-color: transparent;
   transition: all 0.3s ease;
+  text-align: start;
+  font: inherit;
+}
+.auth-section form .form-group textarea {
+  resize: vertical;
+  min-height: 5rem;
+}
+.auth-section form .form-group input[type="color"] {
+  cursor: pointer;
 }
 
 .auth-section .container.right-left .right h2 {
@@ -135,14 +168,55 @@
     color-mix(in oklab, var(--y-color-primary) 20%, transparent);
   outline: 5px solid var(--y-color-primary);
 }
-.auth-section form .form-group input:focus {
+.auth-section form .form-group :is(input, textarea):focus {
   border-color: var(--y-color-primary);
   box-shadow: 0 0 0 3px
     color-mix(in oklab, var(--y-color-primary) 20%, transparent);
   outline: none;
 }
 
-.auth-section form .form-group label {
+/* Custom date/time pickers (doctors-page calendar UI) — see form-datetime-pickers.js */
+.auth-section .y-field-picker {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+.auth-section .y-field-picker-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-8);
+  padding: var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-8);
+  background-color: transparent;
+  transition: all 0.3s ease;
+  text-align: start;
+  cursor: pointer;
+}
+.auth-section .y-field-picker-trigger:focus-visible {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.auth-section .y-field-picker-value {
+  flex: 1;
+  min-width: 0;
+  text-align: start;
+}
+.auth-section .y-field-picker-value--placeholder {
+  color: var(--y-color-grey);
+}
+.auth-section .y-field-picker-trigger i {
+  flex-shrink: 0;
+  color: var(--y-color-primary);
+  font-size: 1rem;
+}
+
+.auth-section form .form-group label,
+.auth-section form .form-group .form-group-heading {
   font-weight: 700;
 }
 .auth-section .container form p.new-account,
@@ -191,7 +265,7 @@
     border-top-left-radius: var(--y-radius-l);
     border-top-right-radius: var(--y-radius-l);
   }
-  .auth-section form :is(input, select, textarea) {
+  .auth-section form :is(input, select, textarea, .y-field-picker-trigger) {
     font-size: var(--y-space-16) !important;
   }
   .auth-section form .form-group label {

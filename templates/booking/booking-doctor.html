@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../../components/doctor-page.css" />
   <link rel="stylesheet" href="booking.css" />
   <link rel="stylesheet" href="../../components/popup.css" />
+  <link rel="stylesheet" href="../../components/form-validation.css" />
 
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -52,15 +53,27 @@
             </div>
             <div class="left">
               <h2>اكمل حجزك</h2>
-              <form action="">
-                <label for="name">اسم المريض</label>
-                <input type="text" name="name" id="name">
-                <label for="phone">رقم الجوال</label>
-                <input type="number" name="phone" id="phone">
-                <label for="email">البريد الإلكتروني</label>
-                <input type="email" name="email" id="email">
+              <form action="" method="post" novalidate data-y-form="booking-patient">
+                <div class="y-form-field">
+                  <label for="name">اسم المريض</label>
+                  <input type="text" name="name" id="name" autocomplete="name" aria-describedby="booking-name-error"
+                    aria-invalid="false">
+                  <p class="field-error" id="booking-name-error" role="alert" hidden></p>
+                </div>
+                <div class="y-form-field">
+                  <label for="phone">رقم الجوال</label>
+                  <input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="numeric"
+                    aria-describedby="booking-phone-error" aria-invalid="false">
+                  <p class="field-error" id="booking-phone-error" role="alert" hidden></p>
+                </div>
+                <div class="y-form-field">
+                  <label for="email">البريد الإلكتروني</label>
+                  <input type="email" name="email" id="email" autocomplete="email"
+                    aria-describedby="booking-email-error" aria-invalid="false">
+                  <p class="field-error" id="booking-email-error" role="alert" hidden></p>
+                </div>
                 <div class="buttons">
-                  <a href="#payment-popup" class="btn main-button fw">احجز</a>
+                  <button type="submit" class="btn main-button fw">احجز</button>
                   <a href="#" class="btn white-button fw">الغاء</a>
                 </div>
               </form>
@@ -84,34 +97,50 @@
   <div id="payment-popup" class="popup-overlay">
     <div class="popup-content payment-form">
       <a href="#" class="close-btn">&times;</a>
-      <h2> ادخل بريدك الاكتروني</h2>
-      <div class="form-group">
-        <input type="email" id="email-popup" placeholder="البريد الإلكتروني">
-      </div>
-      <h2>معلومات الدفع</h2>
-      <div class="form-group">
-        <label for="card-number">رقم البطاقة</label>
-        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
-      </div>
-      <div class="form-group">
-        <label for="card-holder">اسم حامل البطاقة</label>
-        <input type="text" id="card-holder" placeholder="الاسم على البطاقة">
-      </div>
-      <div class="expiry-cvv">
+      <form action="" method="post" novalidate data-y-form="booking-payment">
+        <h2> ادخل بريدك الاكتروني</h2>
         <div class="form-group">
-          <label for="expiry-month">تاريخ الإنتهاء</label>
-          <input type="text" id="expiry-month" placeholder="الشهر">
+          <label for="email-popup">البريد الإلكتروني</label>
+          <input type="email" id="email-popup" name="payment-email" autocomplete="email" placeholder="البريد الإلكتروني"
+            aria-describedby="email-popup-error" aria-invalid="false">
+          <p class="field-error" id="email-popup-error" role="alert" hidden></p>
+        </div>
+        <h2>معلومات الدفع</h2>
+        <div class="form-group">
+          <label for="card-number">رقم البطاقة</label>
+          <input type="text" id="card-number" name="card-number" inputmode="numeric" autocomplete="cc-number"
+            placeholder="XXXX XXXX XXXX XXXX" aria-describedby="card-number-error" aria-invalid="false">
+          <p class="field-error" id="card-number-error" role="alert" hidden></p>
         </div>
         <div class="form-group">
-          <label for="expiry-year" style="color: transparent;">.</label>
-          <input type="text" id="expiry-year" placeholder="السنة">
+          <label for="card-holder">اسم حامل البطاقة</label>
+          <input type="text" id="card-holder" name="cc-name" autocomplete="cc-name" placeholder="الاسم على البطاقة"
+            aria-describedby="card-holder-error" aria-invalid="false">
+          <p class="field-error" id="card-holder-error" role="alert" hidden></p>
         </div>
-        <div class="form-group">
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" placeholder="XXX">
+        <div class="expiry-cvv">
+          <div class="form-group">
+            <label for="expiry-month">تاريخ الإنتهاء</label>
+            <input type="text" id="expiry-month" name="cc-exp-month" inputmode="numeric" placeholder="الشهر"
+              aria-describedby="expiry-month-error" aria-invalid="false" autocomplete="cc-exp-month">
+            <p class="field-error" id="expiry-month-error" role="alert" hidden></p>
+          </div>
+          <div class="form-group">
+            <label for="expiry-year" style="color: transparent; user-select: none" aria-hidden="true">.</label>
+            <input type="text" id="expiry-year" name="cc-exp-year" inputmode="numeric" placeholder="السنة"
+              aria-describedby="expiry-year-error" aria-invalid="false" autocomplete="cc-exp-year"
+              aria-label="سنة انتهاء البطاقة">
+            <p class="field-error" id="expiry-year-error" role="alert" hidden></p>
+          </div>
+          <div class="form-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cc-csc" inputmode="numeric" autocomplete="cc-csc" placeholder="XXX"
+              aria-describedby="cvv-error" aria-invalid="false">
+            <p class="field-error" id="cvv-error" role="alert" hidden></p>
+          </div>
         </div>
-      </div>
-      <a href="#success-popup" class="btn main-button fw">ادفع</a>
+        <button type="submit" class="btn main-button fw">ادفع</button>
+      </form>
     </div>
   </div>
 
@@ -125,7 +154,13 @@
     </div>
   </div>
 
+  <script src="../../js/y-catalog.js"></script>
+  <script src="../../js/y-storage.js"></script>
+  <script src="../../js/y-booking-fill.js"></script>
+  <script src="../../js/y-booking-commit.js"></script>
   <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/y-form-validation.js"></script>
+  <script src="../../js/forms-validation.js"></script>
 </body>
 
 </html>
