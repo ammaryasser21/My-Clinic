@@ -18,10 +18,10 @@
   flex-direction: row;
   gap: var(--y-space-16);
 }
-.account-page .about-box-clinic .box .top img {
+/* .account-page .about-box-clinic .box .top img {
   width: 75px;
   object-fit: cover;
-}
+} */
 .account-page .about-box-clinic .box .top .content {
   display: flex;
   flex-direction: column;
